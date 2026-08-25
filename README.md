@@ -1,4 +1,5 @@
-# Paper mapping ("Three Ways to Be Wrong", TMLR submission)
+# Three Ways to Be Wrong
+# Paper mapping
 
 | Paper artifact | Script / notebook | Output |
 |---|---|---|
