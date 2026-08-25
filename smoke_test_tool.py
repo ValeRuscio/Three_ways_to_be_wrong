@@ -24,7 +24,7 @@ S = [3, 4]
 m0, _ = margin(model, ids, g, c)
 
 scores = score_candidates(model, W, C, ids, g, c, S)
-assert set(scores) == set(RANKERS) and scores["sheaf"].shape == (4, 4)
+assert set(scores) == set(RANKERS) and scores["affine"].shape == (4, 4)
 print("scores OK:", {k: f"{v.abs().sum():.3f}" for k, v in scores.items()})
 
 cands = [(l, h) for l in range(4) for h in range(4)]     # full measurement
@@ -40,9 +40,9 @@ sub = candidate_subset(scores, top=3, n_random=4)
 assert 3 <= len(sub) <= 16
 curves = cumulative_curves(model, W, ids, g, c, S, scores, m0,
                            effects=eff, ks=(1, 4))
-assert "oracle_drop@4" in curves and "sheaf_drop@4" in curves
+assert "oracle_drop@4" in curves and "affine_drop@4" in curves
 print(f"curves OK: oracle@4 {curves['oracle_drop@4']:+.3f}, "
-      f"sheaf@4 {curves['sheaf_drop@4']:+.3f}, "
+      f"affine@4 {curves['affine_drop@4']:+.3f}, "
       f"random@4 {curves['random_drop@4']:+.3f}")
 
 # joint-vs-single consistency: ablating one candidate two ways must agree

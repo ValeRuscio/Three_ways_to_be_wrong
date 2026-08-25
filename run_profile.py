@@ -104,7 +104,7 @@ def main():
     print(f"  C3 affinity  median {st.median(r['c3_err'] for r in rows):.2e}")
     print(f"  runtime (x one forward): cache "
           f"{st.median(r['x_cache'] for r in rows):.1f}  "
-          f"ob(s) {st.median(r['x_ob'] for r in rows):.0f}  "
+          f"R(S) {st.median(r['x_ob'] for r in rows):.0f}  "
           f"tDLA {st.median(r['x_tdla'] for r in rows):.1f}")
     if rows[0]['peak_gb'] == rows[0]['peak_gb']:
         print(f"  peak memory: {max(r['peak_gb'] for r in rows):.1f} GB")

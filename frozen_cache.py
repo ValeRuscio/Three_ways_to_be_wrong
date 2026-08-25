@@ -1,4 +1,4 @@
-"""Frozen-coefficient (sheaf) forward pass for Llama/Qwen2.5-style decoders.
+"""Frozen-coefficient (affine) forward pass for Llama/Qwen2.5-style decoders.
 
 For one prompt, caches the realized multiplicative coefficient fields
 (attention probabilities A, gated-MLP gate factors g, inverse-RMS scales)
@@ -260,7 +260,7 @@ def tdla_edge_scores(W: Weights, C: ForwardCache, tok_g: int,
     """Exact pulled-back readout paired with per-edge attention messages.
 
     Returns scores [L, H, |src|]: contribution of edge (l, h, j -> qpos) to the
-    target logit under the frozen contract, with the cosection pulled back
+    target logit under the frozen contract, with the readout pulled back
     through all downstream frozen maps by (linear) autograd.
     """
     x0 = C.resid[0].clone()

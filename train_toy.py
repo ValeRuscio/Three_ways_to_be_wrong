@@ -1,14 +1,14 @@
 """Experiment 7: controlled-ontogeny toy model.
 
 Trains a tiny Llama on synthetic facts with FULLY CONTROLLED exposure counts
-and competitor pressure, then runs the ob(s) diagnostic at checkpoints.
+and competitor pressure, then runs the R(S) diagnostic at checkpoints.
 
 Why this makes the paper's causal case: on real corpora, "long-tail facts
-fail as presence" is a correlation with popularity. Here exposure is
+fail as source" is a correlation with popularity. Here exposure is
 assigned, so the claims become interventions:
-  P1 exposure -> class: facts in the lowest exposure band fail as presence;
+  P1 exposure -> class: facts in the lowest exposure band fail as source;
      mid-band failures shift to transport/selection.
-  P2 order of emergence: presence dominates early training; transport
+  P2 order of emergence: source dominates early training; transport
      becomes a stable class as accuracy rises; selection appears last
      (paper Sec 6.10, now with controlled data).
   P3 competitor pressure: facts whose object is SHARED by many subjects
@@ -114,7 +114,7 @@ def train(model, sents, steps, device, batch=64, lr=3e-4, ckpt_steps=(),
 @torch.no_grad()
 def diagnose(model, tid, facts, device, q=0.10):
     """ob-free light verdicts (delivery/content ordered rule), plus accuracy,
-    per fact.  Full ob(s) can be run on the failure subset separately."""
+    per fact.  Full R(S) can be run on the failure subset separately."""
     W = Weights(model)
     rows, caches = [], {}
     for f in facts:
@@ -135,14 +135,14 @@ def diagnose(model, tid, facts, device, q=0.10):
     succ = [r for r in rows if r["correct"]]
     if len(succ) < 5:
         for r in rows:
-            r["verdict"] = "correct" if r["correct"] else "presence"
+            r["verdict"] = "correct" if r["correct"] else "source"
         return rows
     th_d = torch.tensor([r["delivery"] for r in succ]).quantile(q).item()
     th_p = torch.tensor([r["pi_S"] for r in succ]).quantile(q).item()
     for r in rows:
         r["verdict"] = ("correct" if r["correct"] else
                         "selection" if r["delivery"] >= th_d else
-                        "transport" if r["pi_S"] >= th_p else "presence")
+                        "transport" if r["pi_S"] >= th_p else "source")
     return rows
 
 

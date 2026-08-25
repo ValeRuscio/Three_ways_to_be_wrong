@@ -1,9 +1,9 @@
-"""Experiment 1: validate the pinned obstruction ob(s).
+"""Experiment 1: validate the pinned obstruction R(S).
 
 Per model, over a labeled cohort (your existing verdicts), this driver:
-  (a) computes ob(s) and its residual depth profile for every example;
-  (b) tests class separation: transport vs {presence, selection, correct}
-      (AUC + Mann-Whitney), and presence-vs-transport via the depth centroid;
+  (a) computes R(S) and its residual depth profile for every example;
+  (b) tests class separation: transport vs {source, selection, correct}
+      (AUC + Mann-Whitney), and source-vs-transport via the depth centroid;
   (c) checks agreement with the existing transported-support verdicts;
   (d) if per-example ablation effects are supplied (or --run_ablation), compares
       Spearman(ob, effect) against Spearman(attention mass, effect) and
@@ -13,7 +13,7 @@ Per model, over a labeled cohort (your existing verdicts), this driver:
 Cohort schema (jsonl, one record per example):
   {"prompt": str, "target_first_token": int, "competitor_token": int,
    "source_span": [start, end]          # inclusive token indices, contiguous
-   "verdict": "presence"|"transport"|"selection"|"correct",
+   "verdict": "source"|"transport"|"selection"|"correct",
    "tau": float | null,                 # your delivered-transport scalar
    "ablation_effect": float | null}     # corrected logit drop, if precomputed
 
@@ -145,16 +145,16 @@ def main():
 
     # ---- analysis ---------------------------------------------------------
     by = lambda v, key="ob": [r[key] for r in rows if r["verdict"] == v]
-    print("\n=== (a) class separation, ob(s) ===")
-    for v in ("presence", "transport", "selection", "correct"):
+    print("\n=== (a) class separation, R(S) ===")
+    for v in ("source", "transport", "selection", "correct"):
         xs = torch.tensor(by(v) or [float('nan')])
         print(f"  {v:<9s} n={len(by(v)):3d} median ob={xs.median():8.3f}")
     print(f"  AUC transport vs correct+selection: "
           f"{auc(by('transport'), by('correct') + by('selection')):.3f}")
-    print(f"  AUC {{presence,transport}} vs {{selection,correct}}: "
-          f"{auc(by('presence') + by('transport'), by('selection') + by('correct')):.3f}")
-    print(f"  presence vs transport by DEPTH CENTROID (presence earlier): "
-          f"{auc(by('transport', 'centroid'), by('presence', 'centroid')):.3f}")
+    print(f"  AUC {{source,transport}} vs {{selection,correct}}: "
+          f"{auc(by('source') + by('transport'), by('selection') + by('correct')):.3f}")
+    print(f"  source vs transport by DEPTH CENTROID (source earlier): "
+          f"{auc(by('transport', 'centroid'), by('source', 'centroid')):.3f}")
 
     print("\n=== (b) agreement with existing transport verdicts ===")
     fails = [r for r in rows if r["verdict"] != "correct"]
@@ -168,7 +168,7 @@ def main():
     if have:
         print("\n=== (c) predicting ablation effect sizes ===")
         eff = [r["ablation_effect"] for r in have]
-        for name, key in (("ob(s)", "ob"), ("attention mass", "attn_mass"),
+        for name, key in (("R(S)", "ob"), ("attention mass", "attn_mass"),
                           ("tau", "tau")):
             vals = [r[key] for r in have]
             if any(v is None for v in vals):

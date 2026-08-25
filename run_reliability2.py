@@ -16,7 +16,7 @@ subject-dominant, or they are excluded as unverified.
 Candidate alignment: maps live on the (layer, head) grid -- identical across
 prompts by construction; token positions never enter the comparison.
 
-Metrics per (baseline, variant) pair and per map type (sheaf / attention /
+Metrics per (baseline, variant) pair and per map type (affine / attention /
 dla / actnorm): weighted cosine, Spearman, top-8 Jaccard, rank-biased
 overlap (p = 0.9), depth-centroid shift.  Headline: AUC of map change for
 separating verified route changes from nuisance changes, with subject-level
@@ -62,7 +62,7 @@ def head_maps(model, W, C, g, c, S):
     if W.center:
         dla = dla - s_post.mean(-1) * u.sum()
     return {
-        "sheaf": tdla_edge_scores(W, C, g, S, tok_c=c).sum(-1).cpu(),
+        "affine": tdla_edge_scores(W, C, g, S, tok_c=c).sum(-1).cpu(),
         "attention": torch.stack([C.layers[l].A[:, -1, S].sum(-1)
                                   for l in range(W.L)]).cpu(),
         "dla": dla.cpu(),
@@ -169,7 +169,7 @@ def main():
             kind = ("route" if name.startswith("r_") else "nuisance")
             if kind == "route" and not e["verified"]:
                 kind = "route_unverified"
-            for mtype in ("sheaf", "attention", "dla", "actnorm"):
+            for mtype in ("affine", "attention", "dla", "actnorm"):
                 sim = map_similarity(data["base"]["maps"][mtype],
                                      e["maps"][mtype])
                 rows.append(dict(subject=subj, variant=name, kind=kind,
@@ -185,11 +185,11 @@ def main():
     from run_obstruction_validation import auc
     import statistics as st
     print("\n=== reliability v2: verified-route vs nuisance discrimination ===")
-    ver = sum(1 for r in rows if r["kind"] == "route" and r["map"] == "sheaf")
+    ver = sum(1 for r in rows if r["kind"] == "route" and r["map"] == "affine")
     unv = sum(1 for r in rows
-              if r["kind"] == "route_unverified" and r["map"] == "sheaf")
+              if r["kind"] == "route_unverified" and r["map"] == "affine")
     print(f"route variants verified contextual: {ver}/{ver + unv}")
-    for mtype in ("sheaf", "attention", "dla", "actnorm"):
+    for mtype in ("affine", "attention", "dla", "actnorm"):
         sub = [r for r in rows if r["map"] == mtype]
         chg = [1 - r["rbo"] for r in sub if r["kind"] == "route"]
         nch = [1 - r["rbo"] for r in sub if r["kind"] == "nuisance"]

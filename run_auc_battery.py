@@ -3,11 +3,11 @@
 Tiers:
   black-box : top-token logprob, entropy, top-2 logit margin       (paper: 0.59)
   internal  : pi_S (patch content), tau (transported support)      (paper: 0.98)
-  sheaf     : ob(s), depth centroid, ob_norm                       (new)
+  affine     : R(S), depth centroid, ob_norm                       (new)
 
-Tasks: presence-vs-transport (the pair with opposite remedies), and each
-class vs rest.  If the sheaf tier matches the internal tier WITHOUT the
-calibrated tau thresholds, the obstruction is a self-contained diagnostic.
+Tasks: source-vs-transport (the pair with opposite remedies), and each
+class vs rest.  If the affine tier matches the internal tier WITHOUT the
+calibrated tau thresholds, the residual is a self-contained diagnostic.
 
 Single-feature AUCs plus a two-feature Fisher discriminant (closed form, no
 sklearn).  Expects the per-example CSV from run_obstruction_validation.py,
@@ -22,13 +22,13 @@ import torch
 from frozen_cache import Weights, build_cache
 from run_obstruction_validation import auc
 
-TASKS = [("presence", "transport"), ("presence", None),
+TASKS = [("source", "transport"), ("source", None),
          ("transport", None), ("selection", None)]
 
 TIERS = {
     "black-box": ["logprob", "entropy", "top2margin"],
     "internal":  ["pi_S", "tau"],
-    "sheaf":     ["ob", "centroid", "ob_norm"],
+    "affine":     ["ob", "centroid", "ob_norm"],
 }
 
 
@@ -89,7 +89,7 @@ def main():
     table = []
     for pos, neg in TASKS:
         negs = {neg} if neg else \
-            ({"presence", "transport", "selection", "correct"} - {pos})
+            ({"source", "transport", "selection", "correct"} - {pos})
         name = f"{pos} vs {neg or 'rest'}"
         line, rec = f"{name:<24s}", dict(task=name)
         for tier, feats in TIERS.items():

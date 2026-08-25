@@ -1,4 +1,4 @@
-"""Experiment R3: incremental held-out predictive value of sheaf features.
+"""Experiment R3: incremental held-out predictive value of affine features.
 
 Targets (never used to construct the ledger):
   rails    whether forcing past the divergence puts the model back on rails
@@ -9,9 +9,9 @@ Targets (never used to construct the ledger):
 Feature tiers, cumulative:
   T0 black-box   : top logprob, entropy, top-2 margin
   T1 +internal   : pi_S, attention source mass
-  T2 +sheaf      : ob, delivery surplus (gap0), centroid
+  T2 +affine      : ob, delivery surplus (gap0), centroid
 5-fold CV; ridge for regression (closed form), logistic (few Newton steps)
-for classification.  The claim tested: adding sheaf features improves
+for classification.  The claim tested: adding affine features improves
 held-out prediction beyond confidence + conventional internals.
 
 Usage:
@@ -93,7 +93,7 @@ def main():
     TIERS = {
         "T0 black-box": ["logprob", "entropy", "top2"],
         "T1 +internal": ["logprob", "entropy", "top2", "pi_S", "attn_mass"],
-        "T2 +sheaf": ["logprob", "entropy", "top2", "pi_S", "attn_mass",
+        "T2 +affine": ["logprob", "entropy", "top2", "pi_S", "attn_mass",
                       "ob", "gap0", "centroid"],
     }
     results = []

@@ -19,28 +19,28 @@
 Smoke tests (run all on any new environment): `smoke_test.py`,
 `smoke_test_extended.py`, `smoke_test_tool.py`, `smoke_test_validation.py`.
 
-# Sheaf-obstruction validation & verdict-specific repairs
+# Delivery-residual validation & verdict-specific repairs
 
 Six experiment suites for the ledger paper:
 
 1. **`run_obstruction_validation.py`** — computes the pinned extension
-   obstruction `ob(s)` and tests whether it (a) separates transport failures,
+   obstruction `R(S)` and tests whether it (a) separates transport failures,
    (b) agrees with the existing transported-support verdicts, (c) predicts
    ablation effect sizes better than raw attention and `tau`, (d) transfers
    across models.
 2. **`run_repair_matrix.py`** — verdict-specific causal repairs with
-   cross-class controls: source-state patching (presence), tDLA edge boosting
+   cross-class controls: source-state patching (source), tDLA edge boosting
    (transport), demoter-head ablation (selection), random-head control.
 3. **`run_sensitivity.py`** — pin_L x c_plus-quantile sweep; shows the verdict
    decomposition is stable under the calibration choices (the
    threshold-arbitrariness defense).
-4. **`run_auc_battery.py`** — black-box vs paper-internal vs sheaf features
-   for presence/transport/selection discrimination; if ob+centroid matches
-   pi_S+tau, the obstruction is a self-contained diagnostic.
+4. **`run_auc_battery.py`** — black-box vs paper-internal vs affine features
+   for source/transport/selection discrimination; if ob+centroid matches
+   pi_S+tau, the residual is a self-contained diagnostic.
 5. **`run_bottleneck.py`** — first-token bottleneck (divergence step,
    back-on-rails) resolved by verdict class; requires `target_text` in the
    cohort. Prediction: bottleneck concentrates in selection/transport.
-6. **`fragility()` in `obstruction.py`** — sheaf-Laplacian spectral gap
+6. **`fragility()` in `obstruction.py`** — normal-equations spectral gap
    (sigma_min of the pinned dynamics operator) via inverse power iteration.
    Prediction: small gap = fragile transport; correlate with flip radii.
 
@@ -56,23 +56,23 @@ environment or transformers version.
 | file | contents |
 |---|---|
 | `frozen_cache.py` | coefficient/state cache, frozen linear map, exact pullback tDLA, certificates C1–C2 |
-| `obstruction.py` | pinned least-squares `ob(s)` via matrix-free CG, certificate C3 (affinity) |
+| `obstruction.py` | pinned least-squares `R(S)` via matrix-free CG, certificate C3 (affinity) |
 | `repairs.py` | live-model interventions (wrapped eager attention, residual patch hooks), certificate C-live |
 | `run_obstruction_validation.py` | experiment 1 driver |
 | `run_repair_matrix.py` | experiment 2 driver |
 
-## What `ob(s)` is
+## What `R(S)` is
 
 Unknowns: residual states on the causal cone of the source span (layers
 `1..L`, positions `>= min(S)`). Pins: layer 0; positions left of the cone
 (satisfied by causality); the source span through layer `pin_L` (default
-`L/2`) — this pinned restriction is the local section `s`. One weighted row
-demands success-calibrated target delivery at the terminal stalk
+`L/2`) — this pinned restriction is the fixed source state. One weighted row
+demands success-calibrated target delivery at the final-position state
 (`c_plus` = median `<u_g, x_hat_{L,T}>` over matched successes).
 
 The realized trajectory satisfies every dynamics row exactly, so
-`ob(s)` = minimal frozen-dynamics defect energy needed to deliver the target
-while holding the source section and context fixed. `ob(s) ~ 0` iff the pinned
+`R(S)` = minimal frozen-dynamics defect energy needed to deliver the target
+while holding the source section and context fixed. `R(S) ~ 0` iff the pinned
 extension exists (the connecting-map obstruction class vanishes); the reported
 number is the norm of its least-squares representative.
 
@@ -80,10 +80,10 @@ number is the norm of its least-squares representative.
 
 - correct & selection: small `ob` (delivery already at/near success level);
 - transport: large `ob`, residual energy concentrated mid-route;
-- presence: large `ob`, residual energy concentrated at the source / early
+- source: large `ob`, residual energy concentrated at the source / early
   layers (the solver must *create* the signal, not move it);
-- so magnitude separates `{presence, transport}` from `{selection, correct}`,
-  and the **depth centroid** separates presence from transport.
+- so magnitude separates `{source, transport}` from `{selection, correct}`,
+  and the **depth centroid** separates source from transport.
 
 ## Cohort schema (`cohort.jsonl`)
 
@@ -129,7 +129,7 @@ Cross-model table = concat of the per-model `obstruction.csv` files.
   ~0; if not, raise `lam`.
 - `c_plus`: median success delivery. Alternative: the paper's `Q+_{0.10}`
   quantile, for consistency with the verdict rule.
-- Presence-repair donors: same fact under a different template or with
+- Source-repair donors: same fact under a different template or with
   supporting context (the context-dominance treatment). Donor and receiver
   source spans must be aligned in length.
 - The fast ablation screen in experiment 1 runs inside the frozen account;

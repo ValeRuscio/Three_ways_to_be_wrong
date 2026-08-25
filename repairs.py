@@ -3,7 +3,7 @@ account), so recovery is a genuine causal claim.
 
 Three intervention families, one per verdict class:
 
-  presence  -> source-state patch: residual states over the source span, in a
+  source  -> source-state patch: residual states over the source span, in a
                layer band, are replaced by donor states from a matched success
                (same fact under a template/context where the model succeeds).
   transport -> edge repair: attention probs on the top-k tDLA source->output
@@ -128,7 +128,7 @@ def margin(model, input_ids, tok_g: int, tok_c: int) -> Tuple[float, bool]:
 # ----------------------------- repair library --------------------------------
 
 @torch.no_grad()
-def repair_presence(model, input_ids, tok_g, tok_c, S, donor_states,
+def repair_source(model, input_ids, tok_g, tok_c, S, donor_states,
                     layer_band, alpha=1.0):
     with resid_patch(model, layer_band, S, donor_states, alpha):
         return margin(model, input_ids, tok_g, tok_c)
@@ -207,8 +207,8 @@ def repair_transport_force(model, W: Weights, C: ForwardCache, input_ids,
     probability nudged (the weak arm's failure mode: renormalized boosts
     inject almost nothing against base margins of -3..-8).
 
-    Verdict-specific by construction: if the source stalk holds no
-    target-bearing section (presence failure), the forced message carries
+    Verdict-specific by construction: if the source-span state holds no
+    target-bearing section (source failure), the forced message carries
     nothing useful; if delivery is already at success level (selection),
     forcing changes little. Only transport failures should respond strongly.
     """

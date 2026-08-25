@@ -8,7 +8,7 @@ Answers the reviewer's questions directly:
 
 The paper's prediction: bottleneck (divergence at token 0 + back-on-rails)
 should concentrate in selection and transport failures -- the answer exists
-and initiation fails -- and be rare in presence failures, where there is
+and initiation fails -- and be rare in source failures, where there is
 nothing to get back onto the rails of.
 
 Cohort needs `target_text` (the full canonical answer string) per record.
@@ -87,7 +87,7 @@ def main():
 
     print(f"\n{'verdict':<10s} {'n':>4s} {'div@0':>6s} {'rails':>6s} "
           f"{'med div':>8s}")
-    for v in ("presence", "transport", "selection", "correct"):
+    for v in ("source", "transport", "selection", "correct"):
         sub = [r for r in rows if r["verdict"] == v and r["diverged"]]
         if not sub:
             continue
@@ -96,7 +96,7 @@ def main():
         med = sorted(r["div_step"] for r in sub)[len(sub) // 2]
         print(f"{v:<10s} {len(sub):4d} {d0:6.2f} {rails:6.2f} {med:8d}")
     print("\nPrediction: div@0 & rails concentrate in selection/transport, "
-          "not presence.")
+          "not source.")
 
 
 if __name__ == "__main__":

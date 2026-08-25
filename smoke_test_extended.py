@@ -39,7 +39,7 @@ tok = DummyTok()
 
 # --- sensitivity sweep (2x2 grid, 4 records) --------------------------------
 records = []
-for i, verdict in enumerate(["correct", "correct", "presence", "transport"]):
+for i, verdict in enumerate(["correct", "correct", "source", "transport"]):
     records.append(dict(prompt=f"test prompt number {i} padding", verdict=verdict,
                         target_first_token=5 + i, source_span=[2, 3]))
 res = sweep(model, tok, W, records, "cpu",
@@ -49,9 +49,9 @@ print(f"sensitivity sweep OK ({len(res)} configs, "
       f"min agree {min(r['agree_with_ref'] for r in res):.2f})")
 
 # --- fisher AUC --------------------------------------------------------------
-rows = ([dict(verdict="presence", a=1.0 + 0.1 * i, b=0.5) for i in range(8)] +
+rows = ([dict(verdict="source", a=1.0 + 0.1 * i, b=0.5) for i in range(8)] +
         [dict(verdict="transport", a=2.0 + 0.1 * i, b=1.5) for i in range(8)])
-a = fisher_auc(rows, ["a", "b"], "presence", {"transport"})
+a = fisher_auc(rows, ["a", "b"], "source", {"transport"})
 assert a > 0.9, f"separable classes should give high AUC, got {a}"
 print(f"fisher AUC OK ({a:.3f} on separable synthetic classes)")
 
@@ -70,9 +70,9 @@ assert sig >= 0 and sig == sig
 print(f"fragility OK (sigma_min ~ {sig:.4f})")
 
 # --- equivalence bound -------------------------------------------------------
-labs = {"m1": ["presence"] * 40 + ["transport"] * 10 + ["selection"] * 5,
-        "m2": ["presence"] * 38 + ["transport"] * 12 + ["selection"] * 5,
-        "m3": ["presence"] * 42 + ["transport"] * 9 + ["selection"] * 4}
+labs = {"m1": ["source"] * 40 + ["transport"] * 10 + ["selection"] * 5,
+        "m2": ["source"] * 38 + ["transport"] * 12 + ["selection"] * 5,
+        "m3": ["source"] * 42 + ["transport"] * 9 + ["selection"] * 4}
 obs, bound, _ = homogeneity_equivalence(labs, n_boot=500)
 assert 0 <= obs <= bound <= 1
 print(f"equivalence bound OK (observed max TV {obs:.3f}, "

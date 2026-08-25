@@ -7,14 +7,14 @@ training reliably concentrates attention there (the decoy route: high
 attention mass, no answer content).
 
 Per evaluation prompt we score every source POSITION with (a) attention mass
-and (b) sheaf transported support (tDLA per column), then check:
+and (b) affine transported support (tDLA per column), then check:
 
   ID@1     does the method's top position equal the true value position?
   ablation zeroing the true value column should destroy the margin;
            zeroing the method's top column measures what the method found.
 
 The compelling comparison: if attention's top position is the sink while the
-sheaf's is the true value, 'transported support, not attention mass' is
+affine's is the true value, 'transported support, not attention mass' is
 visible on an object with known structure.  Instrument calibration, not
 repair: like testing a microscope on a known specimen.
 
@@ -105,20 +105,20 @@ def run(out_dir="results/known_circuit", steps=2500, n_eval=150,
         # attention mass per column (all layers/heads):
         attn = torch.stack([C.layers[l].A[:, -1, :].sum(0)
                             for l in range(W.L)]).sum(0)[:len(s) - 1]
-        # sheaf transported support per column:
-        sheaf = tdla_edge_scores(W, C, ans, cols,
+        # affine transported support per column:
+        affine = tdla_edge_scores(W, C, ans, cols,
                                  tok_c=comp).sum(0).sum(0)   # [|cols|]
-        top_attn, top_sheaf = int(attn.argmax()), int(sheaf.argmax())
+        top_attn, top_affine = int(attn.argmax()), int(affine.argmax())
         m0, _ = margin(model, ids, ans, comp)
         drop = lambda col: m0 - ablate_and_measure(
             model, W, ids, ans, comp, [col],
             [(l, h) for l in range(W.L) for h in range(W.H)])
         rows.append(dict(
-            idx=i, val_pos=val_pos, top_attn=top_attn, top_sheaf=top_sheaf,
-            attn_hit=top_attn == val_pos, sheaf_hit=top_sheaf == val_pos,
+            idx=i, val_pos=val_pos, top_attn=top_attn, top_affine=top_affine,
+            attn_hit=top_attn == val_pos, affine_hit=top_affine == val_pos,
             attn_top_is_sink=top_attn == 0,
             drop_true=drop(val_pos), drop_attn_top=drop(top_attn),
-            drop_sheaf_top=drop(top_sheaf)))
+            drop_affine_top=drop(top_affine)))
 
     with open(os.path.join(out_dir, "known_circuit.csv"), "w",
               newline="") as f:
@@ -128,18 +128,18 @@ def run(out_dir="results/known_circuit", steps=2500, n_eval=150,
     n = len(rows)
     summary = dict(
         n=n, task_acc=n_correct / n_eval,
-        id1_sheaf=sum(r["sheaf_hit"] for r in rows) / n,
+        id1_affine=sum(r["affine_hit"] for r in rows) / n,
         id1_attn=sum(r["attn_hit"] for r in rows) / n,
         attn_on_sink=sum(r["attn_top_is_sink"] for r in rows) / n,
         med_drop_true=sorted(r["drop_true"] for r in rows)[n // 2],
-        med_drop_sheaf_top=sorted(r["drop_sheaf_top"] for r in rows)[n // 2],
+        med_drop_affine_top=sorted(r["drop_affine_top"] for r in rows)[n // 2],
         med_drop_attn_top=sorted(r["drop_attn_top"] for r in rows)[n // 2])
     print("\n=== known-circuit calibration ===")
     for k, v in summary.items():
         print(f"  {k:<20s} {v:.3f}" if isinstance(v, float) else
               f"  {k:<20s} {v}")
-    print("prediction: id1_sheaf >> id1_attn; attention's top column is the "
-          "sink; ablating the sheaf's top column destroys the margin.")
+    print("prediction: id1_affine >> id1_attn; attention's top column is the "
+          "sink; ablating the affine's top column destroys the margin.")
     return summary, rows
 
 

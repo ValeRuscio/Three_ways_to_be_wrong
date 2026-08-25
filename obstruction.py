@@ -1,28 +1,28 @@
-"""Pinned extension obstruction ob(s) for the computation sheaf.
+"""Pinned delivery residual R(S) for the prompt-conditioned affine system.
 
 Relative extension problem (Sec. 'obstruction' of the plan):
   unknowns : residual states on the causal cone of the source span
              (layers 1..L, positions >= min(S)), EXCEPT pinned nodes;
   pins     : layer 0 everywhere; positions < min(S) at all layers (satisfied
              automatically by causality); the source span S for layers
-             1..pin_L  (this is the local section s);
-  demand   : success-level target delivery at the terminal stalk,
+             1..pin_L  (this is the pinned source state);
+  demand   : success-level target delivery at the final-position state,
              <u_g, x_hat_{L,T}> = c_plus, weighted by lam.
 
 The realized trajectory satisfies every dynamics row exactly (conservation /
 reconstruction certificates), so at delta = 0 the only nonzero residual is the
-terminal delivery row.  ob(s) is therefore the minimal frozen-dynamics defect
+terminal delivery row.  R(S) is therefore the minimal frozen-dynamics defect
 energy required to extend the pinned source section to a target-delivering
 terminal state:
 
-  ob(s)^2 = min_{delta on free nodes} sum_l ||X_{l+1} - F_l(X_l)||^2
+  R(S)^2 = min_{delta on free nodes} sum_l ||X_{l+1} - F_l(X_l)||^2
             + lam^2 (<u_g, x_hat_{L,T}(X)> - c_plus)^2 ,   X = realized + delta.
 
-ob(s) ~ 0        <=> the pinned extension exists (delivery is reachable inside
-                     the selected sheaf without breaking the dynamics);
-ob(s) large      <=> obstruction: no such extension (transport failure), or the
-                     section itself carries no target (presence failure).
-The residual DEPTH PROFILE separates those two: presence -> energy at the
+R(S) ~ 0        <=> the pinned extension exists (delivery is reachable inside
+                     the selected affine without breaking the dynamics);
+R(S) large      <=> obstruction: no such extension (transport failure), or the
+                     section itself carries no target (source failure).
+The residual DEPTH PROFILE separates those two: source -> energy at the
 source/early layers; transport -> energy along the route.
 
 Solved matrix-free by CG on the normal equations.  The adjoint is exact
@@ -83,7 +83,7 @@ def solve_obstruction(W: Weights, C: ForwardCache, S: Sequence[int],
 
     # One-sided demand: only a delivery SHORTFALL is an obstruction.  If the
     # realized delivery already meets c_plus, the pinned extension is the
-    # realized section itself and ob(s) = 0 exactly.
+    # realized section itself and R(S) = 0 exactly.
     a0 = float(delivered(realized[-1][-1]))
     if a0 >= c_plus:
         lo, hi = int(mid_band[0] * L), int(mid_band[1] * L)
@@ -179,14 +179,14 @@ def solve_obstruction(W: Weights, C: ForwardCache, S: Sequence[int],
         delivered_gap0=float(del0 / lam), delivered_gap=float(dl / lam),
         profile=prof.cpu(), depth_centroid=centroid, pi_S=pi,
         # pi floor 0.05: prevents ob_norm blowups when source content ~ 0
-        # (presence failures); use raw ob + pi_S separately for analysis.
+        # (source failures); use raw ob + pi_S separately for analysis.
         ob_norm=ob / max(pi, 0.05), cg_iters=it, cert_affine=cert)
 
 
 def fragility(W: Weights, C: ForwardCache, S: Sequence[int],
               pin_L: int = None, power_iters: int = 6, cg_iters: int = 60,
               mu: float = 1e-4) -> float:
-    """Sheaf-Laplacian spectral gap at the source interface.
+    """Affine-Laplacian spectral gap at the source interface.
 
     Estimates sigma_min of the pinned dynamics operator A (delivery row
     EXCLUDED) on the free coordinates, via inverse power iteration: each step

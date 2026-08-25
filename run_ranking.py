@@ -4,7 +4,7 @@ Per model x example: freeze six rankings from the cached pass, measure
 ground-truth single-candidate effects on the live model, compute
 Spearman / precision@k / cumulative-drop / regret curves.
 
---specificity additionally rescoring the SHEAF ranker under corrupted
+--specificity additionally rescoring the AFFINE ranker under corrupted
 configurations (same-type wrong target; shifted source span; random target)
 against the same measured ground truth: certificates still pass, Spearman
 should collapse -- exactness is not specificity.
@@ -86,7 +86,7 @@ def main():
                                     if x["target_first_token"] != g])
             shift = min(len(ids) - S[-1] - 2, 3) or -min(S[0], 3)
             variants = {
-                "true": scores["sheaf"],
+                "true": scores["affine"],
                 "wrong_target": tdla_edge_scores(W, C, wrong_tgt, S,
                                                  tok_c=c).sum(-1).cpu(),
                 "wrong_span": tdla_edge_scores(W, C, g,
@@ -120,7 +120,7 @@ def main():
         print(f"  {name:<10s} {st.median(vals):+.3f}   "
               f"p@8 {st.median([row[f'{name}_p@8'] for row in rows]):.2f}")
     if spec_rows:
-        print("=== specificity: sheaf rho under corrupted configs ===")
+        print("=== specificity: affine rho under corrupted configs ===")
         for k in ("true", "wrong_target", "wrong_span", "random_target"):
             vals = [s[f"rho_{k}"] for s in spec_rows
                     if s[f"rho_{k}"] == s[f"rho_{k}"]]

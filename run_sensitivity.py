@@ -1,6 +1,6 @@
 """Experiment 3: threshold-sensitivity sweep for the obstruction verdicts.
 
-Recomputes ob(s) over a grid of the two design choices --
+Recomputes R(S) over a grid of the two design choices --
   pin_L    in {L/4, L/2, 3L/4}   (how deep the source section is pinned)
   c_plus   in success-quantiles {0.05, 0.10, 0.25}
 -- and reports, per configuration: class medians of ob, the transport-AUC,
@@ -51,12 +51,12 @@ def sweep(model, tok, W, records, device, lam=30.0, pin_fracs=PIN_FRACS,
                        if r["verdict"] == v]
         results.append(dict(
             pin_frac=pf, quantile=q, c_plus=c_plus,
-            med_presence=float(torch.tensor(g("presence") or [float("nan")]).median()),
+            med_source=float(torch.tensor(g("source") or [float("nan")]).median()),
             med_transport=float(torch.tensor(g("transport") or [float("nan")]).median()),
             med_selection=float(torch.tensor(g("selection") or [float("nan")]).median()),
             med_correct=float(torch.tensor(g("correct") or [float("nan")]).median()),
             auc_transport=auc(g("transport"), g("correct") + g("selection")),
-            auc_pt_vs_sc=auc(g("presence") + g("transport"),
+            auc_pt_vs_sc=auc(g("source") + g("transport"),
                              g("selection") + g("correct"))))
 
     # agreement of the ob>0 split with the reference configuration

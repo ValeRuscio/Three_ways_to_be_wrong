@@ -4,15 +4,15 @@ Applies every repair family to every verdict class and reports the matrix of
 flip rates and mean margin changes.  The taxonomy's causal claim is that the
 DIAGONAL dominates:
 
-                      presence-repair  transport-repair  selection-repair
-  presence failures        HIGH              low               low
+                      source-repair  transport-repair  selection-repair
+  source failures        HIGH              low               low
   transport failures       (any)             HIGH              low
   selection failures       (any)             low               HIGH
 
 plus random controls (random heads / random edges / donor-free band patch)
 that should sit near zero everywhere.
 
-Cohort schema extends experiment 1's jsonl with donor info for presence rows:
+Cohort schema extends experiment 1's jsonl with donor info for source rows:
   "donor_prompt": str | null      # matched success: same fact, different
                                   # template or with supporting context
   "donor_source_span": [a, b]     # donor's source-span token indices
@@ -25,11 +25,11 @@ import argparse, json, os, csv
 import torch
 
 from frozen_cache import Weights, build_cache, certify_frozen
-from repairs import (repair_presence, repair_transport,
+from repairs import (repair_source, repair_transport,
                      repair_transport_force, repair_selection,
                      repair_random_heads, certify_wrappers, margin)
 
-REPAIRS = ("presence_patch", "transport_edges", "transport_force",
+REPAIRS = ("source_patch", "transport_edges", "transport_force",
            "selection_demoters", "random_heads")
 
 
@@ -39,7 +39,7 @@ def main():
     ap.add_argument("--cohort", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--band_frac", nargs=2, type=float, default=[0.2, 0.6],
-                    help="layer band for the presence source patch")
+                    help="layer band for the source source patch")
     ap.add_argument("--k_edges", type=int, default=8)
     ap.add_argument("--k_heads", type=int, default=4)
     ap.add_argument("--device", default="cuda")
@@ -72,7 +72,7 @@ def main():
         m0, _ = margin(model, ids, g, c)
         out = dict(idx=i, verdict=r["verdict"], margin_base=m0)
 
-        # --- presence repair: donor source-state patch ---------------------
+        # --- source repair: donor source-state patch ---------------------
         if r.get("donor_prompt"):
             d_ids = tok(r["donor_prompt"],
                         return_tensors="pt").input_ids[0].to(args.device)
@@ -82,13 +82,13 @@ def main():
             assert len(dS) == len(S), \
                 "align donor/receiver source spans (pad or re-tokenize)"
             donor = {l: D.resid[l][dS] for l in band}
-            m, flip = repair_presence(model, ids, g, c, S, donor, band)
-            out["presence_patch"] = m - m0
-            out["presence_patch_flip"] = flip
+            m, flip = repair_source(model, ids, g, c, S, donor, band)
+            out["source_patch"] = m - m0
+            out["source_patch_flip"] = flip
             # control: patch a random non-source band of same width
             rnd_pos = [(p + 3) % ids.shape[0] for p in S]
-            m_r, _ = repair_presence(model, ids, g, c, rnd_pos, donor, band)
-            out["presence_patch_ctrl"] = m_r - m0
+            m_r, _ = repair_source(model, ids, g, c, rnd_pos, donor, band)
+            out["source_patch_ctrl"] = m_r - m0
 
         # --- transport repairs: weak (boost) and strong (force) ------------
         m, flip = repair_transport(model, W, C, ids, g, c, S, k=args.k_edges)
@@ -123,7 +123,7 @@ def main():
 
     # ---- the matrix -------------------------------------------------------
     print("\n=== repair matrix: mean margin change (flip rate) ===")
-    verdicts = ("presence", "transport", "selection")
+    verdicts = ("source", "transport", "selection")
     header = f"{'':<12s}" + "".join(f"{r:>22s}" for r in REPAIRS)
     print(header)
     for v in verdicts:

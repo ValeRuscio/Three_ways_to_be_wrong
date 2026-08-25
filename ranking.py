@@ -1,4 +1,4 @@
-"""Blinded causal ranking: does the sheaf ledger predict, from one cached
+"""Blinded causal ranking: does the affine ledger predict, from one cached
 forward pass, which structures will matter under subsequent interventions?
 
 Candidates: (layer, head) source->final edge groups.  Six rankers score every
@@ -7,12 +7,12 @@ ground truth is the live-model margin change from ablating each candidate's
 source attention mass (zero A[h, -1, S], renormalize).
 
 Rankers:
-  sheaf      exact pulled-back margin cosection paired with the candidate's
+  affine      exact pulled-back margin readout paired with the candidate's
              transported message (tDLA, margin readout)
   attention  raw attention mass on the source columns
   dla        direct-to-logit attribution of the candidate's source message
              (no pullback through downstream layers)
-  gradxact   -<dm/d(head context), source part>  on the LIVE model
+  gradxact   +<dm/d(head context), source part>  on the LIVE model
              (first-order / attribution-patching prediction of the ablation)
   actnorm    norm of the candidate's source message after W_O
   random     seeded noise
@@ -29,7 +29,7 @@ from frozen_cache import (Weights, ForwardCache, apply_norm, repeat_kv,
                           tdla_edge_scores)
 from repairs import attention_edits, margin
 
-RANKERS = ("sheaf", "attention", "dla", "gradxact", "actnorm", "random")
+RANKERS = ("affine", "attention", "dla", "gradxact", "actnorm", "random")
 
 
 # ---------------------- per-head source messages (cached) --------------------
@@ -129,7 +129,7 @@ def score_candidates(model, W: Weights, C: ForwardCache, ids, tok_g, tok_c,
     if W.center:
         dla = dla - s_post.mean(-1) * u.sum()
     out = {
-        "sheaf": tdla_edge_scores(W, C, tok_g, S, tok_c=tok_c).sum(-1),
+        "affine": tdla_edge_scores(W, C, tok_g, S, tok_c=tok_c).sum(-1),
         "attention": torch.stack([C.layers[l].A[:, -1, S].sum(-1)
                                   for l in range(W.L)]),
         "dla": dla,
@@ -184,7 +184,7 @@ def candidate_subset(scores: Dict[str, torch.Tensor], top=20, n_random=40,
                      seed=0) -> List[tuple]:
     """Union of each ranker's top candidates plus a random sample -- the
     measured set for large models (Spearman/precision computed on it)."""
-    L, H = scores["sheaf"].shape
+    L, H = scores["affine"].shape
     picked = set()
     for name, s in scores.items():
         if name == "random":
@@ -290,7 +290,7 @@ def cumulative_curves(model, W, ids, tok_g, tok_c, S, scores, m0,
                       effects=None, ks=(1, 2, 4, 8, 16, 32)) -> dict:
     """Joint-ablation margin drop of each ranker's top-k (measured live),
     plus the oracle curve on the measured set if effects are given."""
-    L, H = scores["sheaf"].shape
+    L, H = scores["affine"].shape
     out = {}
     rankings = {n: [ (int(i) // H, int(i) % H)
                      for i in torch.argsort(s.flatten(), descending=True)]

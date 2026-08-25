@@ -1,4 +1,4 @@
-"""Obstruction stress sweep: does ob(s) respond to delivery difficulty and
+"""Obstruction stress sweep: does R(S) respond to delivery difficulty and
 stay flat under surface paraphrase?
 
 The v1 reliability d_ob was ~0 because the parametric cohort sits where the
@@ -10,7 +10,7 @@ prompts with controlled difficulty:
   ambiguity    unique key vs a second matching key with a different value
   paraphrase   two surface forms of the registry header (control)
 
-Per condition: accuracy, delivery, ob(s) distribution at scientific
+Per condition: accuracy, delivery, R(S) distribution at scientific
 precision.  Predictions: ob's nonzero rate and magnitude rise with
 distractor count and ambiguity; slot has a position effect; paraphrase
 changes nothing.  If ob still cannot be made to vary, it is excluded from
@@ -101,7 +101,7 @@ def main():
         w.writeheader(); w.writerows(rows)
 
     import statistics as st
-    print("\n=== ob(s) stress sweep (scientific precision) ===")
+    print("\n=== R(S) stress sweep (scientific precision) ===")
     print(f"{'n':>4s} {'amb':>5s}  {'acc':>5s}  {'ob>0':>5s}  "
           f"{'ob med (nonzero)':>18s}")
     for n in (4, 8, 16, 32):

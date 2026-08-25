@@ -120,10 +120,10 @@ def _null():
 def column_scores(W, C, ans, comp, ncols):
     from frozen_cache import tdla_edge_scores
     cols = list(range(ncols))
-    sheaf = tdla_edge_scores(W, C, ans, cols, tok_c=comp).sum(0).sum(0)
+    affine = tdla_edge_scores(W, C, ans, cols, tok_c=comp).sum(0).sum(0)
     attn = torch.stack([C.layers[l].A[:, -1, :ncols].sum(0)
                         for l in range(W.L)]).sum(0)
-    return {"sheaf": sheaf.cpu(), "attention": attn.cpu()}
+    return {"affine": affine.cpu(), "attention": attn.cpu()}
 
 
 def evaluate(model, W, tid, rng, condition, n_eval, device, edit,
@@ -235,28 +235,28 @@ def main():
 
     import statistics as st
     print(f"\n=== known-circuit v2 ({args.seeds} seeds) ===")
-    print(f"{'condition':<11s} {'sheaf ID@1':>10s} {'attn ID@1':>10s} "
-          f"{'attn->decoy':>11s} {'sheaf regret':>12s}")
+    print(f"{'condition':<11s} {'affine ID@1':>10s} {'attn ID@1':>10s} "
+          f"{'attn->decoy':>11s} {'affine regret':>12s}")
     for cond in ("easy", "decoy", "competing", "hard"):
         sub = [r for r in rows if r["condition"] == cond]
         if not sub:
             continue
         seed_ids = sorted({r["seed"] for r in sub})
-        sh = [st.mean([r["sheaf_hit_lenient"] for r in sub
+        sh = [st.mean([r["affine_hit_lenient"] for r in sub
                        if r["seed"] == s2]) for s2 in seed_ids]
         at = [st.mean([r["attention_hit_lenient"] for r in sub
                        if r["seed"] == s2]) for s2 in seed_ids]
         dc = st.mean([r["attention_top_is_decoy"] for r in sub])
-        rg = st.median([r["sheaf_regret"] for r in sub])
+        rg = st.median([r["affine_regret"] for r in sub])
         print(f"{cond:<11s} {st.median(sh):>7.2f} "
               f"[{min(sh):.2f}-{max(sh):.2f}] {st.median(at):>7.2f}   "
               f"{dc:>8.2f}   {rg:>10.3f}")
     neg = [r for r in rows if r["drop_true"] < 0]
     print(f"negative drop_true: {len(neg)}/{len(rows)} "
-          f"(signed recovery: sheaf sign agreement "
-          f"{st.mean([r['sheaf_signagree'] for r in rows]):.2f})")
+          f"(signed recovery: affine sign agreement "
+          f"{st.mean([r['affine_signagree'] for r in rows]):.2f})")
     print("ideal pattern: both work on easy; attention degrades under decoy;"
-          " sheaf holds; both degrade gracefully under competing routes.")
+          " affine holds; both degrade gracefully under competing routes.")
 
 
 if __name__ == "__main__":

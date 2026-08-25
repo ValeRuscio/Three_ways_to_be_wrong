@@ -9,7 +9,7 @@ Two sources:
 
 For each record this script: generates greedily (word-level, alias-robust
 match), finds the subject span under the model tokenizer, sets target first
-token / competitor / target_text, builds a context-donor prompt for presence
+token / competitor / target_text, builds a context-donor prompt for source
 repairs, and balances failures vs successes.
 
 Verdicts: left null by default -- fill them from YOUR verdict-tier pipeline
@@ -116,8 +116,8 @@ TWOHOP = [  # (landmark, country, capital) -- common-knowledge triples
 
 def make_extraction(n=120, n_distractors=8, seed=0):
     """Synthetic key-value extraction: the answer is verbatim in context.
-    Presence holds by token identity, so all failures are transport/selection
-    -- the paper's zero-presence prediction, testable with ob(s)."""
+    Source holds by token identity, so all failures are transport/selection
+    -- the paper's zero-source prediction, testable with R(S)."""
     rng = random.Random(seed)
     recs = []
     for _ in range(n):
@@ -302,7 +302,7 @@ def main():
             d = float(target_delivery(C.resid[-1], W, C, o["target_first_token"]))
             p = pi_S(C, o["target_first_token"], S)
             o["verdict"] = ("selection" if d >= th_d else
-                            "transport" if p >= th_p else "presence")
+                            "transport" if p >= th_p else "source")
 
     with open(args.out, "w") as f:
         for o in cohort:
