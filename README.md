@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # Three Ways to Be Wrong — supplementary code and results
+=======
+# Three Ways to Be Wrong
+# Paper mapping
+>>>>>>> a25a1f6ba4f653123e7835dd8b967dbc3c31a488
 
 This directory packages the experiments for **Three Ways to Be Wrong: Selected Computation and the Origins of Factual Errors in Language Models** (manuscript reviewed 8 November 2026). The publication title may change. The paper's proposed alternative title is not used as a final publication record here.
 
