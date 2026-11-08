@@ -1,0 +1,9 @@
+{
+  "prompts": 200,
+  "max_baseline_error": 0.0,
+  "max_native_certificate": 1.685102574811026e-06,
+  "finite_checks": 180,
+  "finite_failures": 0,
+  "finite_unresolved": 146,
+  "max_finite_error": 4.385555774294068e-05
+}

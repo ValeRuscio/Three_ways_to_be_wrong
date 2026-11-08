@@ -1,0 +1,9 @@
+{
+  "checks": 2016,
+  "live_failures": 199,
+  "frozen_failures": 0,
+  "live_unresolved": 970,
+  "frozen_unresolved": 1516,
+  "max_split_closure": 7.554823514691506e-16,
+  "interpretation": "Sampled numerical validation, NOT a proof for all weights, prompts or quantities. Unresolved near-zero slopes are not informative successes. Frozen q/k/gate gradients are structurally zero; finite edit tests should preserve the frozen objective. Native finite differences have truncation and rounding error; inspect epsilon trends and failures."
+}

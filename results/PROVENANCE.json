@@ -1,0 +1,38 @@
+[
+  {
+    "archive": "channels_fresh_v1_summaries_20261102_230039.zip",
+    "sha256": "781581f4c94f5b8e06bc3f804b26cd7488da9e803826de64cfb623311e643066",
+    "included_files": 19,
+    "subset": true
+  },
+  {
+    "archive": "reviewer_v1_summaries_20261104_095022.zip",
+    "sha256": "5b8e17317140a3d2a30456a2194636e45dd70493247b66474fbd9efe7a13570c",
+    "included_files": 33,
+    "subset": true
+  },
+  {
+    "archive": "overnight_20261104_094937_00cb7442_COMPLETE_summaries_20261104_155245.zip",
+    "sha256": "db8e9a8f550553120e12e1df5943d12a6b546ebedd5efb330cbc031111aefd88",
+    "included_files": 54,
+    "subset": true
+  },
+  {
+    "archive": "precision_20261104_163622_b189816b_COMPLETE_summaries_20261104_212759.zip",
+    "sha256": "01484c16a2e8e4c8a23ef2e536efcd14b8f3c2d0b11b4a26046dfd32c811ea89",
+    "included_files": 98,
+    "subset": true
+  },
+  {
+    "archive": "signed_projection_20261104_215931_2c12b2c1_COMPLETE_summaries_20261104_220359.zip",
+    "sha256": "ac8f88d6fa46e1c26a6d26814a757917b2715e5a1b01f06dd473ce600098eea3",
+    "included_files": 17,
+    "subset": true
+  },
+  {
+    "archive": "adjoints_20261105_145050_3fa9ded3_COMPLETE_20261105_155034.zip",
+    "sha256": "77f248500166347ac2e03bb46cc1720f90b6373af4892def35fd57d795d6a2cc",
+    "included_files": 17,
+    "subset": true
+  }
+]

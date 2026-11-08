@@ -1,0 +1,11 @@
+{
+  "regimes": "Vocabulary-centered gold/competitor origin diagnostics, calibrated on independent canonical-token + accepted-answer successes. Not the earlier labels unchanged, and not proven causal stages. Continuation/mixed/uncalibrated cases retained.",
+  "freeze": "Exact Shapley attribution of derivative difference for this three-group freeze game, with signed projection shares; can be negative. One-freeze marginal norms are not additive.",
+  "norms": "Includes all RMSNorm/LayerNorm modules, including OLMo Q/K normalization and final norm.",
+  "variance": "Balanced subject x templates 0/1/2; interaction retained. Attention decomposes semantic role masses, not incomparable raw token slots.",
+  "sink": "Answer-site pre-gate first-token origin vector constancy conditional on relation and template. Low variance alone does not prove an output unigram prior or causal bias function.",
+  "matrix": "One-downstream-layer gate freeze per column. Marginal effects overlap; no additive column sum or unique causal-stage assignment.",
+  "certificates": "Centered live finite differences over epsilon sweep plus single-matrix frozen finite-response affinity. Report failures and unresolved directions, not just average error.",
+  "bias": "Family comparisons are observational. QKV bias presence is confounded with training, normalization and architecture; no causal attribution to biases.",
+  "bootstrap": "Equal-fact averages and subject-cluster bootstrap; no confidence interval with fewer than five subjects; exploratory, not multiplicity-corrected."
+}

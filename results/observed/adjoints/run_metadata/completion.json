@@ -1,0 +1,13 @@
+{
+  "finished": 1793891464.902291,
+  "stages": [
+    "adjoints",
+    "jacobian",
+    "sgd",
+    "curvature"
+  ],
+  "models": [
+    "llama1b",
+    "llama8b"
+  ]
+}

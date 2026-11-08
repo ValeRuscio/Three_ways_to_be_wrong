@@ -1,0 +1,5 @@
+{
+  "max_closure": 3.813816043364312e-15,
+  "max_baseline_disagreement": 0.0,
+  "interpretation": "Reference means estimated separately within trained and initialized conditions; CIs condition on these reference sets and initialization seeds. Directional, not causal, evidence."
+}

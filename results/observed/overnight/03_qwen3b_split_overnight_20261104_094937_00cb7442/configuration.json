@@ -1,0 +1,82 @@
+{
+  "seed": 0,
+  "device": "cuda",
+  "cpu_threads": 4,
+  "tolerance": 0.0001,
+  "max_new_tokens": 32,
+  "models": [
+    {
+      "key": "qwen3b",
+      "repo": "Qwen/Qwen2.5-3B"
+    }
+  ],
+  "templates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variance_templates": [
+    0,
+    1,
+    2
+  ],
+  "calibration_templates": [
+    0
+  ],
+  "source_quantiles": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "primary_quantile": 0.05,
+  "min_calibration_subjects": 5,
+  "null_models": [
+    "llama1b"
+  ],
+  "null_prompts": null,
+  "random_initialization_seed": 1729,
+  "readout_seeds": [
+    0
+  ],
+  "freeze_models": [
+    "llama1b"
+  ],
+  "freeze_prompts": null,
+  "matrix_models": [
+    "llama1b"
+  ],
+  "matrix_prompts": 100,
+  "matrix_families": [
+    "gate",
+    "up",
+    "down",
+    "q",
+    "k",
+    "v",
+    "o"
+  ],
+  "certificate_prompts": 16,
+  "certificate_layer_fractions": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "fd_epsilons": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "fd_atol": 0.0002,
+  "fd_rtol": 0.03,
+  "frozen_rtol": 0.002,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "bootstrap": 1000,
+  "unit_readout": true,
+  "freeze_mode": "singletons"
+}

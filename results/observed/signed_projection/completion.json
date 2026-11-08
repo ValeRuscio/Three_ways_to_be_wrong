@@ -1,0 +1,8 @@
+{
+  "finished": 1793829801.2433124,
+  "models": [
+    "llama1b",
+    "llama8b"
+  ],
+  "prompts_per_model": 100
+}

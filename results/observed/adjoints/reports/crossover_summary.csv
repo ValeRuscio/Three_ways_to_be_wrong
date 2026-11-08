@@ -1,0 +1,8 @@
+model,regime,prompts,facts,subjects,total_crossed,total_crossed_valid_facts,total_crossed_lo,total_crossed_hi,per_position_crossed,per_position_crossed_valid_facts,per_position_crossed_lo,per_position_crossed_hi,total_persistent_crossing,total_persistent_crossing_valid_facts,total_persistent_crossing_lo,total_persistent_crossing_hi,per_position_persistent_crossing,per_position_persistent_crossing_valid_facts,per_position_persistent_crossing_lo,per_position_persistent_crossing_hi
+llama1b,absent_origin,15,14,14,0.25,14,0.07142857142857142,0.4651785714285706,0.5714285714285714,14,0.2857142857142857,0.7857142857142857,8.5,4,,,6.6875,8,4.6875,8.689062499999999
+llama1b,answer_success,16,16,16,0.25,16,0.0625,0.5,0.6875,16,0.4375,0.875,9.5,4,,,8.818181818181818,11,7.636363636363637,10.0
+llama1b,continuation_failure,1,1,1,0.0,1,,,0.0,1,,,,0,,,,0,,
+llama1b,misretrieved_origin,4,4,4,0.75,4,,,0.75,4,,,8.333333333333334,3,,,8.333333333333334,3,,
+llama1b,mixed_origin_failure,1,1,1,0.0,1,,,1.0,1,,,,0,,,10.0,1,,
+llama1b,overridden_origin,1,1,1,1.0,1,,,1.0,1,,,9.0,1,,,7.0,1,,
+llama1b,uncalibrated_failure,62,53,53,0.22641509433962265,53,0.11320754716981132,0.33962264150943394,0.619496855345912,53,0.4904874213836478,0.7421383647798743,8.958333333333334,12,8.082291666666666,9.876041666666666,8.191176470588236,34,7.249632352941177,9.058823529411764

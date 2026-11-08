@@ -1,0 +1,8 @@
+{
+  "python": "3.10.12 (main, Jan 26 2026, 14:55:28) [GCC 11.4.0]",
+  "torch": "2.7.0+cu128",
+  "transformers": "4.48.3",
+  "platform": "Linux-6.8.0-1046-nvidia-64k-aarch64-with-glibc2.35",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GH200 480GB"
+}

@@ -1,0 +1,298 @@
+{
+  "model_type": "olmo2",
+  "layers": 32,
+  "hidden_size": 4096,
+  "normalization_modules": [
+    "model.layers.0.self_attn.q_norm",
+    "model.layers.0.self_attn.k_norm",
+    "model.layers.0.post_attention_layernorm",
+    "model.layers.0.post_feedforward_layernorm",
+    "model.layers.1.self_attn.q_norm",
+    "model.layers.1.self_attn.k_norm",
+    "model.layers.1.post_attention_layernorm",
+    "model.layers.1.post_feedforward_layernorm",
+    "model.layers.2.self_attn.q_norm",
+    "model.layers.2.self_attn.k_norm",
+    "model.layers.2.post_attention_layernorm",
+    "model.layers.2.post_feedforward_layernorm",
+    "model.layers.3.self_attn.q_norm",
+    "model.layers.3.self_attn.k_norm",
+    "model.layers.3.post_attention_layernorm",
+    "model.layers.3.post_feedforward_layernorm",
+    "model.layers.4.self_attn.q_norm",
+    "model.layers.4.self_attn.k_norm",
+    "model.layers.4.post_attention_layernorm",
+    "model.layers.4.post_feedforward_layernorm",
+    "model.layers.5.self_attn.q_norm",
+    "model.layers.5.self_attn.k_norm",
+    "model.layers.5.post_attention_layernorm",
+    "model.layers.5.post_feedforward_layernorm",
+    "model.layers.6.self_attn.q_norm",
+    "model.layers.6.self_attn.k_norm",
+    "model.layers.6.post_attention_layernorm",
+    "model.layers.6.post_feedforward_layernorm",
+    "model.layers.7.self_attn.q_norm",
+    "model.layers.7.self_attn.k_norm",
+    "model.layers.7.post_attention_layernorm",
+    "model.layers.7.post_feedforward_layernorm",
+    "model.layers.8.self_attn.q_norm",
+    "model.layers.8.self_attn.k_norm",
+    "model.layers.8.post_attention_layernorm",
+    "model.layers.8.post_feedforward_layernorm",
+    "model.layers.9.self_attn.q_norm",
+    "model.layers.9.self_attn.k_norm",
+    "model.layers.9.post_attention_layernorm",
+    "model.layers.9.post_feedforward_layernorm",
+    "model.layers.10.self_attn.q_norm",
+    "model.layers.10.self_attn.k_norm",
+    "model.layers.10.post_attention_layernorm",
+    "model.layers.10.post_feedforward_layernorm",
+    "model.layers.11.self_attn.q_norm",
+    "model.layers.11.self_attn.k_norm",
+    "model.layers.11.post_attention_layernorm",
+    "model.layers.11.post_feedforward_layernorm",
+    "model.layers.12.self_attn.q_norm",
+    "model.layers.12.self_attn.k_norm",
+    "model.layers.12.post_attention_layernorm",
+    "model.layers.12.post_feedforward_layernorm",
+    "model.layers.13.self_attn.q_norm",
+    "model.layers.13.self_attn.k_norm",
+    "model.layers.13.post_attention_layernorm",
+    "model.layers.13.post_feedforward_layernorm",
+    "model.layers.14.self_attn.q_norm",
+    "model.layers.14.self_attn.k_norm",
+    "model.layers.14.post_attention_layernorm",
+    "model.layers.14.post_feedforward_layernorm",
+    "model.layers.15.self_attn.q_norm",
+    "model.layers.15.self_attn.k_norm",
+    "model.layers.15.post_attention_layernorm",
+    "model.layers.15.post_feedforward_layernorm",
+    "model.layers.16.self_attn.q_norm",
+    "model.layers.16.self_attn.k_norm",
+    "model.layers.16.post_attention_layernorm",
+    "model.layers.16.post_feedforward_layernorm",
+    "model.layers.17.self_attn.q_norm",
+    "model.layers.17.self_attn.k_norm",
+    "model.layers.17.post_attention_layernorm",
+    "model.layers.17.post_feedforward_layernorm",
+    "model.layers.18.self_attn.q_norm",
+    "model.layers.18.self_attn.k_norm",
+    "model.layers.18.post_attention_layernorm",
+    "model.layers.18.post_feedforward_layernorm",
+    "model.layers.19.self_attn.q_norm",
+    "model.layers.19.self_attn.k_norm",
+    "model.layers.19.post_attention_layernorm",
+    "model.layers.19.post_feedforward_layernorm",
+    "model.layers.20.self_attn.q_norm",
+    "model.layers.20.self_attn.k_norm",
+    "model.layers.20.post_attention_layernorm",
+    "model.layers.20.post_feedforward_layernorm",
+    "model.layers.21.self_attn.q_norm",
+    "model.layers.21.self_attn.k_norm",
+    "model.layers.21.post_attention_layernorm",
+    "model.layers.21.post_feedforward_layernorm",
+    "model.layers.22.self_attn.q_norm",
+    "model.layers.22.self_attn.k_norm",
+    "model.layers.22.post_attention_layernorm",
+    "model.layers.22.post_feedforward_layernorm",
+    "model.layers.23.self_attn.q_norm",
+    "model.layers.23.self_attn.k_norm",
+    "model.layers.23.post_attention_layernorm",
+    "model.layers.23.post_feedforward_layernorm",
+    "model.layers.24.self_attn.q_norm",
+    "model.layers.24.self_attn.k_norm",
+    "model.layers.24.post_attention_layernorm",
+    "model.layers.24.post_feedforward_layernorm",
+    "model.layers.25.self_attn.q_norm",
+    "model.layers.25.self_attn.k_norm",
+    "model.layers.25.post_attention_layernorm",
+    "model.layers.25.post_feedforward_layernorm",
+    "model.layers.26.self_attn.q_norm",
+    "model.layers.26.self_attn.k_norm",
+    "model.layers.26.post_attention_layernorm",
+    "model.layers.26.post_feedforward_layernorm",
+    "model.layers.27.self_attn.q_norm",
+    "model.layers.27.self_attn.k_norm",
+    "model.layers.27.post_attention_layernorm",
+    "model.layers.27.post_feedforward_layernorm",
+    "model.layers.28.self_attn.q_norm",
+    "model.layers.28.self_attn.k_norm",
+    "model.layers.28.post_attention_layernorm",
+    "model.layers.28.post_feedforward_layernorm",
+    "model.layers.29.self_attn.q_norm",
+    "model.layers.29.self_attn.k_norm",
+    "model.layers.29.post_attention_layernorm",
+    "model.layers.29.post_feedforward_layernorm",
+    "model.layers.30.self_attn.q_norm",
+    "model.layers.30.self_attn.k_norm",
+    "model.layers.30.post_attention_layernorm",
+    "model.layers.30.post_feedforward_layernorm",
+    "model.layers.31.self_attn.q_norm",
+    "model.layers.31.self_attn.k_norm",
+    "model.layers.31.post_attention_layernorm",
+    "model.layers.31.post_feedforward_layernorm",
+    "model.norm"
+  ],
+  "qkv_bias": {
+    "0": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "1": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "2": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "3": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "4": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "5": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "6": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "7": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "8": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "9": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "10": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "11": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "12": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "13": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "14": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "15": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "16": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "17": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "18": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "19": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "20": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "21": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "22": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "23": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "24": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "25": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "26": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "27": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "28": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "29": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "30": {
+      "q": false,
+      "k": false,
+      "v": false
+    },
+    "31": {
+      "q": false,
+      "k": false,
+      "v": false
+    }
+  }
+}

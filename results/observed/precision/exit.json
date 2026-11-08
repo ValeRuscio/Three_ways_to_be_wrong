@@ -1,0 +1,56 @@
+{
+  "failed": false,
+  "stopped": false,
+  "cpu_returncode": 0,
+  "jobs": [
+    {
+      "job": "01_certificate_llama1b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793810290.8631458
+    },
+    {
+      "job": "02_certificate_llama3b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793810473.3697565
+    },
+    {
+      "job": "03_certificate_llama8b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793810772.0015457
+    },
+    {
+      "job": "04_certificate_qwen7b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793811052.5996478
+    },
+    {
+      "job": "05_certificate_qwen3b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793811267.1716564
+    },
+    {
+      "job": "06_certificate_olmo7b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793811539.760666
+    },
+    {
+      "job": "07_freeze_llama8b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793822805.9480808
+    },
+    {
+      "job": "08_anisotropy_llama1b_precision_20261104_163622_b189816b",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793823054.2800045
+    }
+  ],
+  "finished": 1793823054.2810495
+}

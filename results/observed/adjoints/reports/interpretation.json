@@ -1,0 +1,10 @@
+{
+  "cuts": "Block-entry x_l for l=0..L-1, plus pre-final-norm cut L. Final norm may prevent late cosine convergence.",
+  "roles": "subject/first/template partition tokens, with subject priority over first. subject_last and answer are overlapping views, NOT extra origins. Answer means last prompt position, not generated answer embedding.",
+  "selection_fraction": "||live-frozen||/(||live-frozen||+||frozen||). Bounded descriptive norm ratio, not additive energy/causal percentage. Cross term is saved.",
+  "jacobian": "Gate=SiLU(gate_proj(normalized MLP input)); raw and per-position block norms. Probes estimate squared Frobenius norms. First and 3-consecutive crossings saved; missing means no crossing, never last layer.",
+  "crossover": "Within-relation tables compare origin regimes with answer_success. Depth conditioned on crossing; report crossing rate alongside depth. Probe SE is Monte Carlo uncertainty, separate from subject bootstrap. No causal-stage validation.",
+  "sgd": "One matrix per intervention, first canonical gold-token CE, fixed baseline strongest nongold competitor. Norm-relative steps with equivalent SGD learning rate saved. Frozen finite gain checked against exact single-matrix linear prediction; finite reselection is live minus frozen replay. No sequence-level repair or specificity claim.",
+  "curvature": "One matrix at a time, baseline margin-gradient direction. Frozen same-matrix Hessian should vanish. Multi-matrix cross-curvature is not covered.",
+  "inference": "Bootstrap clusters subjects after equal-fact averaging, conditional on fixed cohort/reference labels/models. Pointwise intervals, no multiplicity adjustment. Sparse regimes/uncalibrated cases retained."
+}

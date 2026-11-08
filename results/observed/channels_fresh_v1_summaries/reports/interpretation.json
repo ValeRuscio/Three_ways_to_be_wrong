@@ -1,0 +1,11 @@
+{
+  "correctness": "Normalized accepted-answer prefix match on greedy generation; canonical first-token outcomes separate. Manually audit ambiguous aliases and repetition.",
+  "split": "Selection includes attention, SiLU gates AND frozen normalization scales; global parameter gradients aggregate ALL token sites.",
+  "fisher": "Monte Carlo conditional next-token model Fisher; content+selection+2cross=live. Margin outer products are not Fisher.",
+  "uncertainty": "Equal-fact means; percentile subject-cluster bootstrap, no CI below five subjects; conditional on saved Monte Carlo draws. Not multiple-testing-corrected confirmatory inference.",
+  "geometry": "Uncentered origin spans; approximate randomized top-r weight SVD. An origin norm crossing need not match a between-prompt variance crossing.",
+  "perturb": "Single-matrix frozen response affine in that matrix. Live-minus-frozen is a defined finite response, not the integrated local selection gradient.",
+  "training": "Retrospective endpoint correctness transitions on a prespecified cohort, not causal evidence about when a fact was learned. Net parameter displacement is not accumulated gradient covariance.",
+  "selection_fraction": "||selection||/(||selection||+||content||), not an additive fraction of total sensitivity; cross can be negative.",
+  "curves": "Plots are descriptive; choose dose/layer on separate calibration data before confirmatory evaluation."
+}

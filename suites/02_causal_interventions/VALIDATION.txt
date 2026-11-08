@@ -1,0 +1,33 @@
+Validation completed 27 October 2026
+
+22 local tests passed, including:
+- Native Llama, Qwen2, GPT-NeoX and OLMo2 reconstruction with nonzero biases.
+- Origin reconstruction, source handoff conservation and affine linearity.
+- Live attention/residual identity, change and exact reversal.
+- Capture and accounting under planted interventions.
+- All repair families and controls on a small native model.
+- Actual tokenizer + generation + measurement path without downloads.
+- Subject split-leakage rejection; word-boundary answer scoring.
+- Cluster bootstrap, Holm handling and sum-coded model fixed effects.
+- Full report pipeline, including alignment, training and repair matrices.
+- Full runner with local data, simulated hub loading, actual small-model forwards,
+  resumability and configuration-change rejection.
+- Corpus-exposure counting with nested entity names.
+
+Local environment:
+Python 3.12.14; torch 2.14.1 CPU; transformers 4.48.3; numpy 2.5.4;
+pandas 3.1.0; scipy 1.18.1; scikit-learn 1.9.1.
+
+The Lambda setup pins torch 2.7.0 CUDA (cu128 by default) and transformers 4.48.3.
+That GPU environment was not executed locally. The notebook runs all tests again
+inside the installed Lambda environment BEFORE scientific runs.
+
+Notebook code cells compile. Embedded source hash and ZIP roundtrip checked.
+Large pretrained weights, actual GPU runtime, model access, and real scientific
+outcomes have not been validated by a completed Lambda run here. No benchmark
+results or expected positive conclusions are supplied.
+
+Missing-subject hotfix: end-to-end runner excludes malformed subject rows before
+generation and audits them without replacement sampling. The migration script
+was rehearsed against the original embedded source; existing cached records and
+fixed data were byte-preserved, and applying the patch twice was safe.

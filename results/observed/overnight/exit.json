@@ -1,0 +1,38 @@
+{
+  "failed": false,
+  "stopped": false,
+  "cpu_returncode": 0,
+  "jobs": [
+    {
+      "job": "01_llama1b_nulls_overnight_20261104_094937_00cb7442",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793790074.4780354
+    },
+    {
+      "job": "02_llama1b_freezes_overnight_20261104_094937_00cb7442",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793794453.2977643
+    },
+    {
+      "job": "03_qwen3b_split_overnight_20261104_094937_00cb7442",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793799729.1356437
+    },
+    {
+      "job": "04_olmo7b_split_overnight_20261104_094937_00cb7442",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793805136.961339
+    },
+    {
+      "job": "05_llama1b_matrix_overnight_20261104_094937_00cb7442",
+      "returncode": 0,
+      "stopped": false,
+      "finished": 1793805735.6725192
+    }
+  ],
+  "finished": 1793805735.6734385
+}

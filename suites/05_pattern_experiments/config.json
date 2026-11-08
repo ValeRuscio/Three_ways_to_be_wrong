@@ -1,0 +1,115 @@
+{
+  "seed": 0,
+  "device": "cuda",
+  "tolerance": 0.0001,
+  "max_new_tokens": 32,
+  "models": [
+    {
+      "key": "llama1b",
+      "repo": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "key": "llama3b",
+      "repo": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "key": "llama8b",
+      "repo": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "key": "qwen7b",
+      "repo": "Qwen/Qwen2.5-7B"
+    }
+  ],
+  "stages": [
+    "capture",
+    "analysis",
+    "weights",
+    "curves",
+    "sink",
+    "training"
+  ],
+  "ranks": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "doses": [
+    0.001,
+    0.003,
+    0.01,
+    0.03
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "scopes": [
+    "below",
+    "above",
+    "all"
+  ],
+  "crossover_fraction": 0.6875,
+  "fit_calibration_pairs": 128,
+  "ridge": 0.0001,
+  "specificity_n": 8,
+  "curve_k": [
+    0,
+    1,
+    4,
+    16,
+    32,
+    128,
+    512,
+    2048,
+    8192,
+    32768,
+    131072
+  ],
+  "curve_orders": [
+    "contribution",
+    "random"
+  ],
+  "curve_modes": [
+    "live",
+    "frozen"
+  ],
+  "sink_doses": [
+    1.0,
+    0.75,
+    0.5,
+    0.25,
+    0.0
+  ],
+  "sink_heads": 4,
+  "source_quantile": 0.05,
+  "log_ratio_epsilon": 1e-08,
+  "training_models": [
+    {
+      "key": "olmo1b",
+      "repo": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "key": "olmo7b",
+      "repo": "allenai/OLMo-2-1124-7B"
+    }
+  ],
+  "training_fractions": [
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "training_sustained": 2,
+  "training_facts_jsonl": null,
+  "gradient_manifest": null,
+  "bootstrap": 2000,
+  "permutations": 100000,
+  "max_eval": null
+}

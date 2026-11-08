@@ -1,0 +1,8 @@
+{
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "torch": "2.7.0+cu128",
+  "transformers": "4.48.3",
+  "platform": "Linux-6.8.0-1064-nvidia-x86_64-with-glibc2.35",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A100-SXM4-40GB"
+}

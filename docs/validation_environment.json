@@ -1,0 +1,8 @@
+{
+  "python": "3.12.14",
+  "torch": "2.14.1",
+  "transformers": "4.48.3",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "device": "cpu"
+}

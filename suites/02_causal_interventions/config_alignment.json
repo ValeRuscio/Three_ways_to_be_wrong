@@ -1,0 +1,176 @@
+{
+  "run_name": "causal_v1",
+  "seed": 0,
+  "device": "cuda",
+  "evaluation_per_relation": 100,
+  "calibration_candidates_per_relation": 250,
+  "calibration_reference_n": 60,
+  "min_calibration": 20,
+  "bootstrap": 2000,
+  "permutations": 2000,
+  "max_new_tokens": 32,
+  "consecutive": 2,
+  "quantile": 0.1,
+  "handoff_quantile": 0.1,
+  "alphas": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "gammas": [
+    1.25,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "selection_doses": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "layer_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "top_heads": 8,
+  "chat_check": false,
+  "run_repairs": true,
+  "run_planted": true,
+  "repair_limit": null,
+  "plant_limit": 100,
+  "save_frozen_cache": false,
+  "facts_jsonl": null,
+  "exposure_csv": null,
+  "common_cost_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "models": [
+    {
+      "key": "llama32_base",
+      "repo": "meta-llama/Llama-3.2-3B",
+      "family": "llama32",
+      "stage": "base",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "llama32_instruct",
+      "repo": "meta-llama/Llama-3.2-3B-Instruct",
+      "family": "llama32",
+      "stage": "instruct",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "llama31_base",
+      "repo": "meta-llama/Llama-3.1-8B",
+      "family": "llama31",
+      "stage": "base",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "llama31_instruct",
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "family": "llama31",
+      "stage": "instruct",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "qwen3_base",
+      "repo": "Qwen/Qwen2.5-3B",
+      "family": "qwen3",
+      "stage": "base",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "qwen3_instruct",
+      "repo": "Qwen/Qwen2.5-3B-Instruct",
+      "family": "qwen3",
+      "stage": "instruct",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "qwen7_base",
+      "repo": "Qwen/Qwen2.5-7B",
+      "family": "qwen7",
+      "stage": "base",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "qwen7_instruct",
+      "repo": "Qwen/Qwen2.5-7B-Instruct",
+      "family": "qwen7",
+      "stage": "instruct",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "olmo_base",
+      "repo": "allenai/OLMo-2-1124-7B",
+      "family": "olmo",
+      "stage": "base",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "olmo_sft",
+      "repo": "allenai/OLMo-2-1124-7B-SFT",
+      "family": "olmo",
+      "stage": "sft",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "olmo_dpo",
+      "repo": "allenai/OLMo-2-1124-7B-DPO",
+      "family": "olmo",
+      "stage": "dpo",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    },
+    {
+      "key": "olmo_instruct",
+      "repo": "allenai/OLMo-2-1124-7B-Instruct",
+      "family": "olmo",
+      "stage": "instruct",
+      "revision": "main",
+      "step": null,
+      "origins": true,
+      "repairs": false
+    }
+  ]
+}

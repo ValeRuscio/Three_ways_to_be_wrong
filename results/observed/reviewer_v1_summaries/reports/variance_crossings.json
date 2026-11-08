@@ -1,0 +1,1479 @@
+[
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": [
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": [
+      10,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": [
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": [
+      13,
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": [
+      13
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": [
+      12
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": [
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": [
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      5,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": [
+      12,
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": [
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": [
+      12,
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 16,
+    "crossings": [
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 17,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 18,
+    "crossings": [
+      12
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 19,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 20,
+    "crossings": [
+      15
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 21,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 22,
+    "crossings": [
+      11
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 23,
+    "crossings": [
+      9
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 24,
+    "crossings": [
+      8,
+      12,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 25,
+    "crossings": [
+      11,
+      13
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 26,
+    "crossings": [
+      11,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 27,
+    "crossings": [
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 28,
+    "crossings": [
+      12,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 29,
+    "crossings": [
+      12
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 30,
+    "crossings": [
+      12
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "attention",
+    "site": 31,
+    "crossings": [
+      12,
+      14
+    ]
+  },
+  {
+    "model": "llama1b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "llama1b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      12
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": [
+      18,
+      21,
+      23,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": [
+      11,
+      16,
+      20,
+      23
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": [
+      16,
+      18,
+      20,
+      24,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": [
+      16,
+      19,
+      24,
+      27
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": [
+      16,
+      20,
+      22
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": [
+      16,
+      20,
+      22,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": [
+      20,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": [
+      18,
+      20,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": [
+      18,
+      21,
+      24
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": [
+      15,
+      22,
+      25,
+      27
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": [
+      15,
+      18,
+      22,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      19,
+      22,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": [
+      16,
+      21,
+      24
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": [
+      16,
+      18,
+      21,
+      24
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": [
+      16,
+      20,
+      24
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": [
+      18,
+      20,
+      24
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 16,
+    "crossings": [
+      17,
+      19,
+      24,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 17,
+    "crossings": [
+      13,
+      15,
+      21,
+      24,
+      27
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 18,
+    "crossings": [
+      15,
+      17,
+      21,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 19,
+    "crossings": [
+      17,
+      19
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 20,
+    "crossings": [
+      17,
+      19,
+      26
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 21,
+    "crossings": [
+      17,
+      19,
+      23,
+      27
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 22,
+    "crossings": [
+      12,
+      19,
+      23,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "attention",
+    "site": 23,
+    "crossings": [
+      16,
+      18,
+      25
+    ]
+  },
+  {
+    "model": "llama3b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "llama3b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      17
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": [
+      17,
+      20,
+      22,
+      24,
+      26,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": [
+      16,
+      20,
+      22,
+      24,
+      26,
+      29
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": [
+      18,
+      20,
+      22,
+      26,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": [
+      17,
+      20,
+      22,
+      26,
+      31
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": [
+      18,
+      23,
+      27,
+      29
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": [
+      18,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": [
+      18,
+      22,
+      25,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": [
+      17,
+      25,
+      29
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": [
+      16,
+      20,
+      28,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": [
+      16,
+      18,
+      22,
+      29
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": [
+      18,
+      20,
+      24,
+      29,
+      31
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      16,
+      19,
+      22,
+      24,
+      27
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": [
+      17,
+      21,
+      25,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": [
+      18,
+      20,
+      25,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": [
+      18,
+      21,
+      25,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": [
+      15,
+      17,
+      21,
+      25,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 16,
+    "crossings": [
+      18,
+      24,
+      27,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 17,
+    "crossings": [
+      18,
+      21,
+      24,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 18,
+    "crossings": [
+      16,
+      18,
+      24,
+      26
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 19,
+    "crossings": [
+      18,
+      23,
+      27
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 20,
+    "crossings": [
+      14,
+      20,
+      26
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 21,
+    "crossings": [
+      16,
+      18,
+      22,
+      27,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 22,
+    "crossings": [
+      19,
+      21,
+      27,
+      31
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 23,
+    "crossings": [
+      10,
+      17,
+      19,
+      22,
+      24,
+      27,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 24,
+    "crossings": [
+      15,
+      19,
+      21,
+      23,
+      26
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 25,
+    "crossings": [
+      14,
+      19,
+      21,
+      23
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 26,
+    "crossings": [
+      16,
+      19,
+      21,
+      23,
+      27,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 27,
+    "crossings": [
+      14,
+      19,
+      21,
+      25
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 28,
+    "crossings": [
+      17,
+      19,
+      21,
+      26,
+      28,
+      30
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 29,
+    "crossings": [
+      21,
+      26,
+      28
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 30,
+    "crossings": [
+      14,
+      17,
+      21,
+      26
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "attention",
+    "site": 31,
+    "crossings": [
+      16,
+      18,
+      20,
+      24,
+      29
+    ]
+  },
+  {
+    "model": "llama8b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "llama8b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      18
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": [
+      22
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": [
+      19
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": [
+      2
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": [
+      4,
+      15
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": [
+      11
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      10
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": [
+      5
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": [
+      1,
+      16
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 16,
+    "crossings": [
+      4,
+      7
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 17,
+    "crossings": [
+      1
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 18,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 19,
+    "crossings": [
+      3
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 20,
+    "crossings": [
+      10
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 21,
+    "crossings": [
+      4
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 22,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 23,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 24,
+    "crossings": [
+      16
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 25,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 26,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 27,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 28,
+    "crossings": [
+      6,
+      9
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 29,
+    "crossings": [
+      1
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 30,
+    "crossings": [
+      8
+    ]
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "attention",
+    "site": 31,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "olmo7b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      21
+    ]
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": [
+      31
+    ]
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": [
+      27
+    ]
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      27
+    ]
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "qwen3b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      32
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 0,
+    "crossings": [
+      19
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 1,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 2,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 3,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 4,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 5,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 6,
+    "crossings": [
+      23
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 7,
+    "crossings": [
+      18,
+      27
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 8,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 9,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 10,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 11,
+    "crossings": [
+      27
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 12,
+    "crossings": [
+      27
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 13,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 14,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 15,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 16,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 17,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 18,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 19,
+    "crossings": [
+      22
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 20,
+    "crossings": [
+      2
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 21,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 22,
+    "crossings": [
+      26
+    ]
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 23,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 24,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 25,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 26,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "attention",
+    "site": 27,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "gate",
+    "site": 0,
+    "crossings": []
+  },
+  {
+    "model": "qwen7b",
+    "measurement": "gate",
+    "site": 1,
+    "crossings": [
+      24
+    ]
+  }
+]

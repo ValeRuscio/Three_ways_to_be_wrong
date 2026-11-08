@@ -1,0 +1,55 @@
+{
+  "models": [
+    "llama1b",
+    "llama8b"
+  ],
+  "device": "cuda",
+  "cpu_threads": 4,
+  "seed": 0,
+  "stages": [
+    "adjoints",
+    "jacobian",
+    "sgd",
+    "curvature"
+  ],
+  "optional_models": [
+    "llama1b"
+  ],
+  "adjoints_prompts": 100,
+  "jacobian_prompts": 100,
+  "sgd_prompts": 100,
+  "curvature_prompts": 8,
+  "jacobian_probes": 8,
+  "crossing_run": 3,
+  "weight_layer_fractions": [
+    0,
+    0.5,
+    1
+  ],
+  "weight_families": [
+    "gate",
+    "down"
+  ],
+  "step_doses": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "curvature_epsilons": [
+    0.0001,
+    0.001
+  ],
+  "fd_prompts": 2,
+  "fd_epsilons": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "fd_atol": 0.0002,
+  "fd_rtol": 0.03,
+  "tolerance": 0.0001,
+  "max_tokens": 256,
+  "bootstrap": 1000,
+  "min_free_gb": 10,
+  "regimes_csv": null
+}

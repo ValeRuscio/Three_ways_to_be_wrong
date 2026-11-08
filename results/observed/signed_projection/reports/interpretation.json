@@ -1,0 +1,8 @@
+{
+  "signed_projection": "p_S = <G_S, mu/||mu||>. G_S is the residual derivative at block entry, final prompt token; not a weight derivative.",
+  "effects": "removed_projection=p_live-p_S. Positive means permitting that mechanism adds a positive mean-direction component in this singleton-freeze comparison.",
+  "normalization": "Shared denominator ||G_all_frozen|| for normalized projections/effects. Unlike per-condition cosine, this preserves linear differences within each prompt.",
+  "contrasts": "Norm-minus-gate and norm-minus-attention are PAIRED differences of removed projections. Positive does not imply an additive percentage allocation. singleton_sum_minus_total measures nonadditivity; nonzero is not an implementation error.",
+  "scope": "Conditional derivative interventions preserve baseline predictions; not finite weight edits or demonstrations of factual error repair. Singleton effects can overlap. Comparisons at fixed reference mean, fixed objective and fixed native forward program.",
+  "uncertainty": "Equal-fact averaging then subject-cluster bootstrap, conditional on these models and reference subjects. Includes no reference-sample uncertainty. Template0 reference means may influence cross-template comparisons; per-template summaries included. Unresolved finite checks are not strong positive certificates."
+}

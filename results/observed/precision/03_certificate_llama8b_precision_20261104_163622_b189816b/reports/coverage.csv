@@ -1,0 +1,17 @@
+model,id,group_id,relation,template,regime,answer_correct,canonical_top1,first_token_id,first_token_in_subject,tokenizer_bos_id
+llama8b,3120232,1328835,composer,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,5340362,2372422,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,5660051,2522656,capital,0,answer_success,True,True,128000,False,128000
+llama8b,1847624,813123,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,6300717,2842812,capital,4,answer_success,True,True,128000,False,128000
+llama8b,1660531,736842,capital,3,answer_success,True,True,128000,False,128000
+llama8b,3731897,1621094,capital of,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,2768689,1188738,composer,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,1847624,813123,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,5932260,2661121,capital,0,answer_success,True,True,128000,False,128000
+llama8b,1381547,617252,director,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,2477345,1072109,composer,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,5929797,2659845,author,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,3523104,1522160,place of birth,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,2654410,1143742,composer,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama8b,1332364,592219,director,0,unlabelled_answer_failure,False,False,128000,False,128000

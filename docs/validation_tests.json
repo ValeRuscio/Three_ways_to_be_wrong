@@ -1,0 +1,57 @@
+[
+  {
+    "suite": "01_controlled_and_validation",
+    "returncode": 0,
+    "seconds": 3.63
+  },
+  {
+    "suite": "02_causal_interventions",
+    "returncode": 0,
+    "seconds": 13.52
+  },
+  {
+    "suite": "03_donor_followups",
+    "returncode": 0,
+    "seconds": 11.96
+  },
+  {
+    "suite": "04_gate_experiments",
+    "returncode": 0,
+    "seconds": 12.08
+  },
+  {
+    "suite": "05_pattern_experiments",
+    "returncode": 0,
+    "seconds": 12.41
+  },
+  {
+    "suite": "06_channels",
+    "returncode": 0,
+    "seconds": 12.19
+  },
+  {
+    "suite": "07_reviewer_followups",
+    "returncode": 0,
+    "seconds": 12.25
+  },
+  {
+    "suite": "08_overnight",
+    "returncode": 0,
+    "seconds": 12.55
+  },
+  {
+    "suite": "09_precision",
+    "returncode": 0,
+    "seconds": 13.04
+  },
+  {
+    "suite": "10_signed_projection",
+    "returncode": 0,
+    "seconds": 12.2
+  },
+  {
+    "suite": "11_adjoints",
+    "returncode": 0,
+    "seconds": 13.65
+  }
+]

@@ -1,0 +1,101 @@
+model,id,group_id,relation,template,regime,answer_correct,canonical_top1,first_token_id,first_token_in_subject,tokenizer_bos_id
+llama1b,1388910,621629,capital,0,answer_success,True,True,128000,False,128000
+llama1b,4788687,2105412,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3120232,1328835,composer,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2211267,965716,capital,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1824118,803757,director,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,512880,210313,capital,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2614416,1126178,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4080365,1784859,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,516959,211909,place of birth,1,answer_success,True,True,128000,False,128000
+llama1b,5340362,2372422,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6157088,2775541,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4080365,1784859,author,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1683241,746034,composer,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6027621,2706533,director,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5141082,2273904,composer,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3321918,1427411,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5652200,2518857,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5660051,2522656,capital,0,answer_success,True,True,128000,False,128000
+llama1b,285168,115275,composer,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5781178,2582950,composer,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1487881,663993,capital of,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1475379,658767,capital,1,unlabelled_answer_failure,False,True,128000,False,128000
+llama1b,3633815,1575873,composer,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1882219,827466,author,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1634003,726592,composer,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2637051,1136504,author,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6257303,2825547,capital,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4623097,2037926,capital,4,answer_success,True,True,128000,False,128000
+llama1b,111229,43463,capital,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1941852,853751,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2478212,1072453,composer,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6513497,2924619,composer,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1847624,813123,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6300717,2842812,capital,4,answer_success,True,True,128000,False,128000
+llama1b,5666682,2526068,director,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6368219,2869258,capital,2,answer_success,True,True,128000,False,128000
+llama1b,1287587,573104,capital of,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2292839,1000579,composer,3,answer_success,True,True,128000,False,128000
+llama1b,5984249,2686551,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,210026,84847,director,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3120232,1328835,composer,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1208142,537981,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1684735,746575,place of birth,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,997300,425888,composer,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3545210,1531860,author,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3640232,1579531,capital,2,answer_success,True,True,128000,False,128000
+llama1b,5341479,2372975,author,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5652200,2518857,author,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1847624,813123,author,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1208142,537981,place of birth,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1660531,736842,capital,3,answer_success,True,True,128000,False,128000
+llama1b,4960050,2187438,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,44272,18385,capital,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3731897,1621094,capital of,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5921978,2655868,author,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,978706,418047,director,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4034856,1763493,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,682895,288646,capital of,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2768689,1188738,composer,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1847624,813123,author,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2768689,1188738,composer,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5932260,2661121,capital,0,answer_success,True,True,128000,False,128000
+llama1b,1381547,617252,director,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5139851,2273346,capital of,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4256277,1865355,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1040220,444436,place of birth,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,6295666,2840765,capital of,0,answer_success,True,False,128000,False,128000
+llama1b,1691938,749148,capital,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1201824,535489,place of birth,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1216659,541540,capital,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2180839,952871,capital of,4,answer_success,True,False,128000,False,128000
+llama1b,2534092,1095007,capital,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,155034,62512,composer,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2477345,1072109,composer,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1332364,592219,director,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,650598,274583,director,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1023390,437485,capital of,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5929797,2659845,author,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,5276013,2340812,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,310631,125822,director,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1216659,541540,capital,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2151993,941324,capital of,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3523104,1522160,place of birth,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2477193,1072048,author,2,answer_success,True,True,128000,False,128000
+llama1b,2654410,1143742,composer,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2627660,1131935,capital of,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,2309875,1007849,capital of,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1003808,428982,capital,0,answer_success,True,False,128000,False,128000
+llama1b,1332364,592219,director,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4725074,2078999,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,975936,416710,composer,0,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,195002,78902,capital,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4085173,1787232,director,4,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,456429,185729,capital of,1,answer_success,True,True,128000,False,128000
+llama1b,1680078,744859,capital of,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,1332364,592219,director,2,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,894483,379434,capital,1,answer_success,True,True,128000,False,128000
+llama1b,2340704,1020811,capital of,1,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,3310711,1421486,author,3,unlabelled_answer_failure,False,False,128000,False,128000
+llama1b,4228857,1852663,director,1,unlabelled_answer_failure,False,False,128000,False,128000

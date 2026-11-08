@@ -1,0 +1,262 @@
+{
+  "model_type": "qwen2",
+  "layers": 36,
+  "hidden_size": 2048,
+  "normalization_modules": [
+    "model.layers.0.input_layernorm",
+    "model.layers.0.post_attention_layernorm",
+    "model.layers.1.input_layernorm",
+    "model.layers.1.post_attention_layernorm",
+    "model.layers.2.input_layernorm",
+    "model.layers.2.post_attention_layernorm",
+    "model.layers.3.input_layernorm",
+    "model.layers.3.post_attention_layernorm",
+    "model.layers.4.input_layernorm",
+    "model.layers.4.post_attention_layernorm",
+    "model.layers.5.input_layernorm",
+    "model.layers.5.post_attention_layernorm",
+    "model.layers.6.input_layernorm",
+    "model.layers.6.post_attention_layernorm",
+    "model.layers.7.input_layernorm",
+    "model.layers.7.post_attention_layernorm",
+    "model.layers.8.input_layernorm",
+    "model.layers.8.post_attention_layernorm",
+    "model.layers.9.input_layernorm",
+    "model.layers.9.post_attention_layernorm",
+    "model.layers.10.input_layernorm",
+    "model.layers.10.post_attention_layernorm",
+    "model.layers.11.input_layernorm",
+    "model.layers.11.post_attention_layernorm",
+    "model.layers.12.input_layernorm",
+    "model.layers.12.post_attention_layernorm",
+    "model.layers.13.input_layernorm",
+    "model.layers.13.post_attention_layernorm",
+    "model.layers.14.input_layernorm",
+    "model.layers.14.post_attention_layernorm",
+    "model.layers.15.input_layernorm",
+    "model.layers.15.post_attention_layernorm",
+    "model.layers.16.input_layernorm",
+    "model.layers.16.post_attention_layernorm",
+    "model.layers.17.input_layernorm",
+    "model.layers.17.post_attention_layernorm",
+    "model.layers.18.input_layernorm",
+    "model.layers.18.post_attention_layernorm",
+    "model.layers.19.input_layernorm",
+    "model.layers.19.post_attention_layernorm",
+    "model.layers.20.input_layernorm",
+    "model.layers.20.post_attention_layernorm",
+    "model.layers.21.input_layernorm",
+    "model.layers.21.post_attention_layernorm",
+    "model.layers.22.input_layernorm",
+    "model.layers.22.post_attention_layernorm",
+    "model.layers.23.input_layernorm",
+    "model.layers.23.post_attention_layernorm",
+    "model.layers.24.input_layernorm",
+    "model.layers.24.post_attention_layernorm",
+    "model.layers.25.input_layernorm",
+    "model.layers.25.post_attention_layernorm",
+    "model.layers.26.input_layernorm",
+    "model.layers.26.post_attention_layernorm",
+    "model.layers.27.input_layernorm",
+    "model.layers.27.post_attention_layernorm",
+    "model.layers.28.input_layernorm",
+    "model.layers.28.post_attention_layernorm",
+    "model.layers.29.input_layernorm",
+    "model.layers.29.post_attention_layernorm",
+    "model.layers.30.input_layernorm",
+    "model.layers.30.post_attention_layernorm",
+    "model.layers.31.input_layernorm",
+    "model.layers.31.post_attention_layernorm",
+    "model.layers.32.input_layernorm",
+    "model.layers.32.post_attention_layernorm",
+    "model.layers.33.input_layernorm",
+    "model.layers.33.post_attention_layernorm",
+    "model.layers.34.input_layernorm",
+    "model.layers.34.post_attention_layernorm",
+    "model.layers.35.input_layernorm",
+    "model.layers.35.post_attention_layernorm",
+    "model.norm"
+  ],
+  "qkv_bias": {
+    "0": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "1": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "2": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "3": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "4": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "5": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "6": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "7": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "8": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "9": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "10": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "11": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "12": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "13": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "14": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "15": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "16": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "17": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "18": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "19": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "20": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "21": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "22": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "23": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "24": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "25": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "26": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "27": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "28": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "29": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "30": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "31": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "32": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "33": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "34": {
+      "q": true,
+      "k": true,
+      "v": true
+    },
+    "35": {
+      "q": true,
+      "k": true,
+      "v": true
+    }
+  }
+}

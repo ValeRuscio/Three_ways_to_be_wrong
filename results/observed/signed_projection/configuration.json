@@ -1,0 +1,29 @@
+{
+  "models": [
+    "llama1b",
+    "llama8b"
+  ],
+  "device": "cuda",
+  "cpu_threads": 4,
+  "seed": 0,
+  "prompts": 100,
+  "reference_subjects": 100,
+  "tolerance": 0.0001,
+  "baseline_atol": 0.0001,
+  "baseline_rtol": 1e-05,
+  "fd_prompts": 2,
+  "fd_layer_fractions": [
+    0,
+    0.5,
+    1
+  ],
+  "fd_epsilons": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "fd_atol": 0.0002,
+  "fd_rtol": 0.03,
+  "bootstrap": 1000,
+  "save_gradients": true
+}

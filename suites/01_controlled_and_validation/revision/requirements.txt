@@ -1,0 +1,12 @@
+# Python 3.10-3.12 recommended; tested here on Python 3.12.
+# Install the appropriate CUDA/CPU torch wheel for your machine first if needed.
+torch>=2.5,<3
+transformers==4.48.3
+numpy>=2,<3
+scipy>=1.13
+pandas>=2.2
+scikit-learn>=1.5
+matplotlib>=3.8
+accelerate>=1.0
+sentencepiece>=0.2
+pytest>=8

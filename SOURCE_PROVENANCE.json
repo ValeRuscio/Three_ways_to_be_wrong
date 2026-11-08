@@ -1,0 +1,62 @@
+[
+  {
+    "suite": "00_original",
+    "repository": "https://github.com/ValeRuscio/Three_ways_to_be_wrong",
+    "local_snapshot_commit": "a25a1f6ba4f653123e7835dd8b967dbc3c31a488"
+  },
+  {
+    "suite": "01_controlled_and_validation",
+    "original_notebook": "Three_Ways_FULL_GPU.ipynb",
+    "original_bundle_sha256": "1032f37187cbe3f4773cd88ea53182134922c11666bcb5496f1ceccf6a9f4af5"
+  },
+  {
+    "suite": "02_causal_interventions",
+    "original_notebook": "Three_Ways_Causal_Experiments.ipynb",
+    "original_bundle_sha256": "ebdbd3b6b6b83a08350cf08ab5b52c4cdedc339667b4fb23be7e61e8074ea909"
+  },
+  {
+    "suite": "03_donor_followups",
+    "original_notebook": "Three_Ways_Full_Followup.ipynb",
+    "original_bundle_sha256": "6d6ee9bcd62e86cdbdb2523031ffafd63ff50903820f01c06e6b7e808fb48c66"
+  },
+  {
+    "suite": "04_gate_experiments",
+    "original_notebook": "Three_Ways_Gate_Experiments.ipynb",
+    "original_bundle_sha256": "448d12ba1e792128f2046bb8b4fcef5a4709075c57f2dc7dabda6f59842ce804"
+  },
+  {
+    "suite": "05_pattern_experiments",
+    "original_notebook": "Three_Ways_Fast_Start.ipynb",
+    "original_bundle_sha256": "7222c9ed9e8e0e8abb1c8fde48d6dc27703990f16d383935672d14c3f7f556d3"
+  },
+  {
+    "suite": "06_channels",
+    "original_notebook": "Three_Ways_Channel_Experiments.ipynb",
+    "original_bundle_sha256": "7eab8c8f56d9c444258748761cb712aec70a2bfcdf12e6638f73203a0a200e4e"
+  },
+  {
+    "suite": "07_reviewer_followups",
+    "original_notebook": "Three_Ways_Reviewer_Followups.ipynb",
+    "original_bundle_sha256": "7050edd691ed2042edb781421a344c181205c03216b03aa1ecf7caf3fa5b4636"
+  },
+  {
+    "suite": "08_overnight",
+    "original_notebook": "Three_Ways_Overnight_Experiments.ipynb",
+    "original_bundle_sha256": "7aeb523df5b5f832a168afc9a31bfd4254bade2e757547efc7c79ff4f11b81a0"
+  },
+  {
+    "suite": "09_precision",
+    "original_notebook": "Three_Ways_Precision_Experiments.ipynb",
+    "original_bundle_sha256": "fc1313eb0af18b21a915e2505c5d7e73d36d19daba626b67cbfaa75a8148b931"
+  },
+  {
+    "suite": "10_signed_projection",
+    "original_notebook": "Three_Ways_Signed_Projection.ipynb",
+    "original_bundle_sha256": "6054c5f3b147892c9c060536957634bba249d700e3b0207096d5ad812ab81602"
+  },
+  {
+    "suite": "11_adjoints",
+    "original_notebook": "Three_Ways_Adjoints_and_Learning.ipynb",
+    "original_bundle_sha256": "76782fdd9e9dafe90cce601ba13ebc9cc52198bfbd91a9af30a91e5a68d7e60f"
+  }
+]

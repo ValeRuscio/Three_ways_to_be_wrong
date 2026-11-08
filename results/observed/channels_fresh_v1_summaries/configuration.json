@@ -1,0 +1,106 @@
+{
+  "seed": 0,
+  "device": "cuda",
+  "cpu_threads": 4,
+  "models": [
+    {
+      "key": "llama1b",
+      "repo": "meta-llama/Llama-3.2-1B"
+    },
+    {
+      "key": "llama3b",
+      "repo": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "key": "llama8b",
+      "repo": "meta-llama/Llama-3.1-8B"
+    },
+    {
+      "key": "qwen7b",
+      "repo": "Qwen/Qwen2.5-7B"
+    }
+  ],
+  "templates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_prompts": null,
+  "regimes_csv": null,
+  "tolerance": 0.0001,
+  "finite_tolerance": 0.002,
+  "max_new_tokens": 32,
+  "fisher_draws": 8,
+  "probe_facts": 32,
+  "probe_layers": null,
+  "probe_layer_fractions": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "families": [
+    "gate",
+    "up",
+    "down",
+    "q",
+    "k",
+    "v",
+    "o"
+  ],
+  "frontier_families": [
+    "gate",
+    "up",
+    "down",
+    "q",
+    "k",
+    "v",
+    "o"
+  ],
+  "doses": [
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "specificity_n": 8,
+  "control_generation": true,
+  "geometry_rank": 16,
+  "svd_oversample": 8,
+  "svd_iterations": 5,
+  "training_models": [
+    {
+      "key": "olmo1b",
+      "repo": "allenai/OLMo-2-0425-1B"
+    },
+    {
+      "key": "olmo7b",
+      "repo": "allenai/OLMo-2-1124-7B"
+    }
+  ],
+  "training_fractions": [
+    0.2,
+    0.5,
+    0.8
+  ],
+  "training_template": 0,
+  "training_facts": 128,
+  "training_families": [
+    "gate",
+    "up",
+    "down",
+    "q",
+    "k",
+    "v",
+    "o"
+  ],
+  "training_rank": 16,
+  "bootstrap": 1000
+}

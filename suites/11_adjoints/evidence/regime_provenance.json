@@ -1,0 +1,6 @@
+{
+  "source": "reviewer_v1_summaries_20261104_095022.zip/reports/regimes.csv",
+  "quantile": 0.05,
+  "definition": "Independent success-calibrated vocabulary-centered origin diagnostic, NOT causal stage",
+  "warning": "Substantial uncalibrated coverage. No exploratory cross-fit relabeling. Labels are descriptive and not validated causal ground truth."
+}
